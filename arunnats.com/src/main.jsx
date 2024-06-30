@@ -8,7 +8,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<div className="w-[96vw] m-auto relative z-50 mt-2 bg-base-10 rounded-full">
+		<div className="w-[96vw] m-auto relative z-50 mt-5 bg-base-10 rounded-full">
 			<Navbar />
 		</div>
 		<div className="flex flex-row">

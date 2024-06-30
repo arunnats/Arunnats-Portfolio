@@ -5,13 +5,13 @@ const TypedAnimation = () => {
 	useEffect(() => {
 		const options = {
 			strings: [
-				"web developer",
-				"programmer",
-				"writer",
-				"FOSS enthusiast",
-				"fast learner",
-				"creator",
-				"data scientist",
+				"Web Developer",
+				"Programmer",
+				"Writer",
+				"FOSS Enthusiast",
+				"Fast Learner",
+				"Creator",
+				"Data Scientist",
 			],
 			typeSpeed: 55,
 			backSpeed: 30,
