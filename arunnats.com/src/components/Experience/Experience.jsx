@@ -38,27 +38,33 @@ const Experience = () => {
 			url: "https://www.corestack.io/",
 			range: "May 2024 - July 2024",
 			html: `
-			<ul className="list-disc">
-				<li>• Developed data generation programs for Azure CSP schema with over 50 correlated fields.</li>
-				<li>• Created programs to randomly generate data and estimate user service billing costs.</li>
-				<li>• Implemented FastAPI servers for API endpoints handling billing details, product codes, and date ranges, with data hosted on MongoDB.</li>
-				<li>• Enabled pagination with token generation for efficient data retrieval and server caching.</li>
-			</ul>
-		`,
+        <ul className="list-disc">
+          <li>• Developed data generation programs for Azure CSP schema with over 50 correlated fields.</li>
+          <li>• Created programs to randomly generate data and estimate user service billing costs.</li>
+          <li>• Implemented FastAPI servers for API endpoints handling billing details, product codes, and date ranges, with data hosted on MongoDB.</li>
+          <li>• Enabled pagination with token generation for efficient data retrieval and server caching.</li>
+        </ul>
+      `,
 			buttonText: "CoreStack",
 		},
 		{
-			company: "Hardware Lab NITC",
+			company: "Hardware Lab - CSED, NITC",
 			title: "Summer Intern",
 			url: "https://hwlabnitc.github.io/",
 			range: "May 2024 - June 2024",
-			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>",
+			html: `
+        <ul className="list-disc">
+          <li>• Wrote MIPS code and created extensive study material for the Hardware Lab course at NITC.</li>
+          <li>• Focused on recursion and function parameter passing.</li>
+          <li>• Resulted in a more comprehensive and extensive documentation.</li>
+        </ul>
+      `,
 			buttonText: "HW Lab NITC",
 		},
 	];
 
 	return (
-		<section id="jobs" className="flex flex-col p-3 py-8">
+		<section id="jobs" className="flex flex-col p-3 py-8 ">
 			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
