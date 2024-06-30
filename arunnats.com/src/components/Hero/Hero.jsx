@@ -8,18 +8,18 @@ import TypedAnimation from "../Typed/Typed";
 const AboutSection = () => {
 	return (
 		<div className="flex flex-col md:flex-row items-center p-3 py-6">
-			<div className="w-4/6 mt-10">
-				<h4 className="text-1xl font-semibold text-primary-content font-poppins text-left mb-2">
+			<div className="w-4/6 2xl:w-2/3 mt-10">
+				<h4 className="2xl:text-3xl text-1xl font-semibold text-primary-content font-poppins text-left mb-2">
 					Hi, my name is
 				</h4>
-				<h1 className="text-7xl font-poppins font-bold text-left mb-2">
+				<h1 className="2xl:text-8xl text-7xl font-poppins font-bold text-left mb-2">
 					{" "}
 					Arun Natarajan.
 				</h1>
-				<h4 className="text-5xl font-bold text-primary-content font-poppins text-left mb-3">
+				<h4 className="2xl:text-7xl text-5xl font-bold text-primary-content font-poppins text-left mb-3">
 					<TypedAnimation />
 				</h4>
-				<p className="lg:text-xl md:text-lg text-accent-content font-roboto text-justify mb-5">
+				<p className="2xl:text-3xl md:text-lg text-accent-content font-roboto text-justify mb-5">
 					I am a year three student at{" "}
 					<a
 						href="https://nitc.ac.in/"
@@ -57,7 +57,7 @@ const AboutSection = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="w-2/6">
+			<div className="w-2/6 2xl:w-1/3">
 				<img
 					src={picture}
 					alt="Profile"
