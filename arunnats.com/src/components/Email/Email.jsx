@@ -17,7 +17,7 @@ const EmailCont = () => {
 				scrollTrigger: {
 					trigger: emailRef.current,
 					start: "top 95%", // when the top of the element is at the bottom of the viewport
-					end: "top 55%", // when the top of the element is 80% from the top of the viewport
+					end: "top 25%", // when the top of the element is 80% from the top of the viewport
 					scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
 				},
 				duration: 1,

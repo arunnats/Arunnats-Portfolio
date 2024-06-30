@@ -21,8 +21,8 @@ const Navbar = () => {
 
 	return (
 		<div className="navbar bg-base-100 max-h-[70px]">
-			<div className="flex-1">
-				<a className="btn btn-ghost text-xl">Arun Natarajan</a>
+			<div className="flex-1" ref={logoRef}>
+				<a className="btn btn-ghost font-poppins text-2xl">Arun Natarajan</a>
 			</div>
 			<div className="flex-none">
 				<ul className="menu menu-horizontal flex justify-center px-1">

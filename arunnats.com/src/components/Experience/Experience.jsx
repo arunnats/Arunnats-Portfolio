@@ -37,7 +37,14 @@ const Experience = () => {
 			title: "SWE Summer Intern",
 			url: "https://www.corestack.io/",
 			range: "May 2024 - July 2024",
-			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>",
+			html: `
+			<ul className="list-disc">
+				<li>• Developed data generation programs for Azure CSP schema with over 50 correlated fields.</li>
+				<li>• Created programs to randomly generate data and estimate user service billing costs.</li>
+				<li>• Implemented FastAPI servers for API endpoints handling billing details, product codes, and date ranges, with data hosted on MongoDB.</li>
+				<li>• Enabled pagination with token generation for efficient data retrieval and server caching.</li>
+			</ul>
+		`,
 			buttonText: "CoreStack",
 		},
 		{
@@ -55,7 +62,7 @@ const Experience = () => {
 			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
-			<div className="flex flex-col md:flex-row max-w-[80%]">
+			<div className="flex flex-col md:flex-row max-w-[75%]">
 				<div
 					role="tablist"
 					aria-label="Job tabs"
@@ -114,7 +121,7 @@ const Experience = () => {
 								{job.range}
 							</h5>
 							<div
-								className="font-roboto text-lg text-primary"
+								className="font-roboto text-lg text-primary text-justify"
 								dangerouslySetInnerHTML={{ __html: job.html }}
 							/>
 						</div>
