@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 			<div className="fixed top-0 left-0 h-full">
 				<Socials />
 			</div>
-			<div className="flex-1 ml-[10vw] mr-[10vw]">
+			<div className="flex-1 ">
 				<BodyCont />
 			</div>
 			<div className="fixed top-0 right-0 h-full">
