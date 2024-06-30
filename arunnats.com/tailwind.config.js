@@ -16,7 +16,7 @@ export default {
 				mytheme: {
 					primary: "#000000",
 
-					"primary-content": "#bebebe",
+					"primary-content": "#989898",
 
 					secondary: "#5c6c74",
 

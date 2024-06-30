@@ -8,21 +8,23 @@ const Navbar = () => {
 			</div>
 			<div className="flex-none">
 				<ul className="menu menu-horizontal flex justify-center px-1">
-					<li className="justify-center">
+					<li className="justify-center font-bold text-md text-secondary font-space">
 						<a href="#about">About</a>
 					</li>
-					<li className="justify-center">
+					<li className="justify-center font-bold text-md text-secondary font-space">
 						<a href="#experience">Experience</a>
 					</li>
-					<li className="justify-center">
+					<li className="justify-center font-bold text-md text-secondary font-space">
 						<a href="#projects">Projects</a>
 					</li>
-					<li className="justify-center">
+					<li className="justify-center font-bold text-md text-secondary font-space">
 						<a href="#contact">Contact</a>
 					</li>
-					<li className="justify-center">
+					<li className="justify-center font-bold text-md text-secondary font-space">
 						<a href="">
-							<button className="btn ghost btn-outline btn-md">Resume</button>
+							<button className="btn  btn-outline btn-md font-bold text-md text-secondary font-space">
+								Resume
+							</button>
 						</a>
 					</li>
 				</ul>

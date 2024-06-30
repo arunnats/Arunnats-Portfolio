@@ -1,32 +1,65 @@
 import React from "react";
+import picture from "../../assets/images/pfp.svg";
+import leetcode from "../../assets/logos/icons8-leetcode.png";
+import linkedin from "../../assets/logos/icons8-linkedin.svg";
+import github from "../../assets/logos/icons8-github.svg";
 import TypedAnimation from "../Typed/Typed";
 
 const AboutSection = () => {
 	return (
-		<div className="flex flex-col md:flex-row items-center justify-center p-3 py-12">
-			<div className="w-full">
-				<h4 className="text-2xl font-semibold text-left mb-3">
+		<div className="flex flex-col md:flex-row items-center p-3 py-6">
+			<div className="w-4/6 mt-10">
+				<h4 className="text-1xl font-semibold text-primary-content font-poppins text-left mb-2">
 					Hi, my name is
 				</h4>
-				<h1 className="text-8xl font-bold text-left mb-2"> Arun Natarajan.</h1>
-				<h4 className="text-6xl font-bold text-left mb-3">
+				<h1 className="text-7xl font-poppins font-bold text-left mb-2">
+					{" "}
+					Arun Natarajan.
+				</h1>
+				<h4 className="text-5xl font-bold text-primary-content font-poppins text-left mb-3">
 					<TypedAnimation />
 				</h4>
-				<p className="text-lg text-justify mb-5">
-					I am a third-year student at{" "}
+				<p className="lg:text-xl md:text-lg text-accent-content font-roboto text-justify mb-5">
+					I am a year three student at{" "}
 					<a
 						href="https://nitc.ac.in/"
-						className="text-blue-500 hover:underline"
+						className="text-accent underline"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						NIT Calicut
 					</a>
-					, pursuing Computer Science and Engineering. My passion extends to web
-					development, programming, along with the domains of AI/ML and embedded
-					systems. I am a writer, designer, editor, and weightlifter, blending
-					together a holistic approach to both technology and well-being.
+					, doing Computer Science and Engineering. I build website, train AI
+					models and do data science. I'm also a writer, designer and amateur
+					powerlifter! Learn more about me at:
 				</p>
+				<ul className="flex flex-row">
+					<li>
+						<a href="https://www.linkedin.com/in/arunnats/">
+							<img src={linkedin} alt="LinkedIn" className="w-12 h-12 m-2" />
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/ArunNats">
+							<img src={github} alt="GitHub" className="w-12 h-12 m-2" />
+						</a>
+					</li>
+					<li>
+						<a href="https://leetcode.com/u/arunnats2004/">
+							<img src={leetcode} alt="LeetCode" className="w-12 h-12 m-2" />
+						</a>
+					</li>
+					<li className="justify-center align-center">
+						<button className="btn btn-ghost btn-outline"> Resume</button>
+					</li>
+				</ul>
+			</div>
+			<div className="w-2/6">
+				<img
+					src={picture}
+					alt="Profile"
+					className="w-[90%] m-auto h-auto p-7"
+				/>
 			</div>
 		</div>
 	);

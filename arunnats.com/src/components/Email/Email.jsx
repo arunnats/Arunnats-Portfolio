@@ -4,7 +4,7 @@ const EmailCont = () => {
 	return (
 		<div className="w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pr-4">
 			<a
-				className="text-black transform  rotate-90 text-2xl mb-36"
+				className="text-black transform font-poppins rotate-90 text-xl mb-32"
 				href="mailto:arunnats2004@gmail.com"
 			>
 				arunnats2004@gmail.com
