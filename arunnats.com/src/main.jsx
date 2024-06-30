@@ -10,9 +10,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
 		<Navbar />
 		<div className="flex flex-row">
-			<Socials />
-			<BodyCont />
-			<EmailCont />
+			<div className="fixed top-0 left-0 h-full">
+				<Socials />
+			</div>
+			<div className="flex-1 ml-[10vw] mr-[10vw]">
+				<BodyCont />
+			</div>
+			<div className="fixed top-0 right-0 h-full">
+				<EmailCont />
+			</div>
 		</div>
 	</React.StrictMode>
 );

@@ -1,8 +1,15 @@
 import React from "react";
+import useScrollDirection from "../../hooks/useScrollDirection";
 
 const Navbar = () => {
+	const scrollDirection = useScrollDirection();
+
 	return (
-		<div className="navbar bg-base-100">
+		<div
+			className={`navbar bg-base-100 fixed top-0 w-full transition-transform duration-300 ${
+				scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+			}`}
+		>
 			<div className="flex-1">
 				<a className="btn btn-ghost text-xl">daisyUI</a>
 			</div>
