@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const Experience = () => {
 	const [activeTabId, setActiveTabId] = useState(0);
 	const [tabFocus, setTabFocus] = useState(null);
 	const tabs = useRef([]);
+	const panelRefs = useRef([]);
 
 	const focusTab = () => {
 		if (tabs.current[tabFocus]) {
@@ -18,7 +20,9 @@ const Experience = () => {
 		}
 	};
 
-	useEffect(() => focusTab(), [tabFocus]);
+	useEffect(() => {
+		focusTab();
+	}, [tabFocus]);
 
 	const onKeyPressed = (e) => {
 		if (e.keyCode === 38 || e.keyCode === 40) {
@@ -62,6 +66,40 @@ const Experience = () => {
 			buttonText: "HW Lab NITC",
 		},
 	];
+
+	useEffect(() => {
+		const observerOptions = {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.3, // Trigger animation when 30% of the element is visible
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const panelIndex = parseInt(entry.target.dataset.index);
+					animatePanel(panelIndex);
+				}
+			});
+		}, observerOptions);
+
+		panelRefs.current.forEach((panel) => {
+			observer.observe(panel);
+		});
+
+		return () => {
+			observer.disconnect();
+		};
+	}, []);
+
+	const animatePanel = (index) => {
+		gsap.from(panelRefs.current[index], {
+			opacity: 0,
+			y: 50,
+			duration: 1,
+			ease: "power3.out",
+		});
+	};
 
 	return (
 		<section id="jobs" className="flex flex-col p-3 py-8 ">
@@ -108,6 +146,8 @@ const Experience = () => {
 							tabIndex={activeTabId === i ? "0" : "-1"}
 							hidden={activeTabId !== i}
 							className="relative"
+							ref={(el) => (panelRefs.current[i] = el)}
+							data-index={i}
 						>
 							<h4 className="text-3xl font-bold text-primary-content font-poppins mb-2">
 								{job.title}
