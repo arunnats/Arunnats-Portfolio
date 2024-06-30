@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 
 const AboutSection = () => {
 	const hiRef = useRef(null);
+	const picRef = useRef(null);
 	const nameRef = useRef(null);
 	const typedTextRef = useRef(null);
 	const descriptionRef = useRef(null);
@@ -21,6 +22,11 @@ const AboutSection = () => {
 		);
 		gsap.fromTo(
 			nameRef.current,
+			{ y: 50, opacity: 0 },
+			{ y: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.4 }
+		);
+		gsap.fromTo(
+			picRef.current,
 			{ y: 50, opacity: 0 },
 			{ y: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.4 }
 		);
@@ -77,7 +83,7 @@ const AboutSection = () => {
 					I am a year three student at{" "}
 					<a
 						href="https://nitc.ac.in/"
-						className="text-accent font-bold"
+						className="text-accent font-bold font-roboto"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -131,6 +137,7 @@ const AboutSection = () => {
 			</div>
 			<div className="w-2/6 2xl:w-1/3">
 				<img
+					ref={picRef}
 					src={picture}
 					alt="Profile"
 					className="w-[90%] m-auto h-auto p-7"
