@@ -1,38 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { gsap } from "gsap";
 
 const Experience = () => {
 	const [activeTabId, setActiveTabId] = useState(0);
-	const [tabFocus, setTabFocus] = useState(null);
 	const tabs = useRef([]);
-	const panelRefs = useRef([]);
+	const panels = useRef([]);
 
-	const focusTab = () => {
-		if (tabs.current[tabFocus]) {
-			tabs.current[tabFocus].focus();
-		} else {
-			if (tabFocus >= tabs.current.length) {
-				setTabFocus(0);
-			}
-			if (tabFocus < 0) {
-				setTabFocus(tabs.current.length - 1);
-			}
+	const onTabClicked = (index) => {
+		if (index !== activeTabId) {
+			animatePanelOut(activeTabId);
+			setActiveTabId(index);
+			animatePanelIn(index);
 		}
 	};
 
-	useEffect(() => {
-		focusTab();
-	}, [tabFocus]);
+	const animatePanelIn = (index) => {
+		gsap.fromTo(
+			panels.current[index],
+			{ opacity: 0, y: 20 },
+			{ opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+		);
+	};
 
-	const onKeyPressed = (e) => {
-		if (e.keyCode === 38 || e.keyCode === 40) {
-			e.preventDefault();
-			if (e.keyCode === 40) {
-				setTabFocus(tabFocus + 1);
-			} else if (e.keyCode === 38) {
-				setTabFocus(tabFocus - 1);
-			}
-		}
+	const animatePanelOut = (index) => {
+		gsap.to(panels.current[index], {
+			opacity: 0,
+			y: -20,
+			duration: 1,
+			ease: "power3.out",
+		});
 	};
 
 	const data = [
@@ -67,40 +63,6 @@ const Experience = () => {
 		},
 	];
 
-	useEffect(() => {
-		const observerOptions = {
-			root: null,
-			rootMargin: "0px",
-			threshold: 0.3, // Trigger animation when 30% of the element is visible
-		};
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const panelIndex = parseInt(entry.target.dataset.index);
-					animatePanel(panelIndex);
-				}
-			});
-		}, observerOptions);
-
-		panelRefs.current.forEach((panel) => {
-			observer.observe(panel);
-		});
-
-		return () => {
-			observer.disconnect();
-		};
-	}, []);
-
-	const animatePanel = (index) => {
-		gsap.from(panelRefs.current[index], {
-			opacity: 0,
-			y: 50,
-			duration: 1,
-			ease: "power3.out",
-		});
-	};
-
 	return (
 		<section id="jobs" className="flex flex-col p-3 py-8 ">
 			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
@@ -110,14 +72,12 @@ const Experience = () => {
 				<div
 					role="tablist"
 					aria-label="Job tabs"
-					onKeyDown={onKeyPressed}
 					className="flex flex-col md:mr-8 mb-6 md:mb-0"
 				>
 					{data.map((job, i) => (
 						<button
 							key={i}
-							isActive={activeTabId === i}
-							onClick={() => setActiveTabId(i)}
+							onClick={() => onTabClicked(i)}
 							ref={(el) => (tabs.current[i] = el)}
 							id={`tab-${i}`}
 							role="tab"
@@ -139,15 +99,10 @@ const Experience = () => {
 					{data.map((job, i) => (
 						<div
 							key={i}
-							isActive={activeTabId === i}
-							id={`panel-${i}`}
-							role="tabpanel"
-							aria-labelledby={`tab-${i}`}
-							tabIndex={activeTabId === i ? "0" : "-1"}
-							hidden={activeTabId !== i}
-							className="relative"
-							ref={(el) => (panelRefs.current[i] = el)}
-							data-index={i}
+							ref={(el) => (panels.current[i] = el)}
+							className={`job-panel ${
+								activeTabId === i ? "opacity-100" : "opacity-0 hidden"
+							}`}
 						>
 							<h4 className="text-3xl font-bold text-primary-content font-poppins mb-2">
 								{job.title}
