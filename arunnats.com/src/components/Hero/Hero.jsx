@@ -50,7 +50,10 @@ const AboutSection = () => {
 						</a>
 					</li>
 					<li className="justify-center align-center">
-						<button className="btn btn-ghost btn-outline"> Resume</button>
+						<button className="btn btn-ghost btn-outline text-primary font-poppins">
+							{" "}
+							Resume
+						</button>
 					</li>
 				</ul>
 			</div>
