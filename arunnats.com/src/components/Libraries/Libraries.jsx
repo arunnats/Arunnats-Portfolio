@@ -82,7 +82,7 @@ const Libraries = () => {
 					<div
 						key={index}
 						ref={(el) => (itemsRef.current[index] = el)}
-						className="flex flex-col items-center mx-6 my-4"
+						className="flex flex-col items-center mx-8"
 					>
 						<img src={item.icon} alt={item.title} className="w-12 h-12 mx-2" />
 						<h3 className="text-lg font-semibold mt-2 text-secondary">
