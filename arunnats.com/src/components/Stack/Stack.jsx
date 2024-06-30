@@ -1,12 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React from "react";
+import Languages from "../Languages/Languages";
+import Frameworks from "../Frameworks/Frameworks";
+import Libraries from "../Libraries/Libraries";
 
 const Stack = () => {
 	return (
-		<div className="flex flex-col md:flex-row items-center px-3 py-4">
-			<h4 className="2xl:text-5xl text-3xl font-bold text-primary font-poppins text-left mb-2">
-				Tech Stack:
-			</h4>
+		<div id="stack">
+			<Languages />
+			<Frameworks />
+			<Libraries />
 		</div>
 	);
 };

@@ -1,10 +1,43 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Experience = () => {
 	const [activeTabId, setActiveTabId] = useState(0);
 	const tabs = useRef([]);
 	const panels = useRef([]);
+	const sectionRef = useRef(null);
+
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: sectionRef.current,
+				start: "top 80%",
+				end: "top 50%",
+				scrub: true,
+				markers: false, // for debug, remove in production
+			},
+		});
+
+		tl.fromTo(
+			sectionRef.current,
+			{ opacity: 0, y: 50 },
+			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+		);
+
+		data.forEach((job, index) => {
+			tl.fromTo(
+				tabs.current[index],
+				{ opacity: 0, y: 20 },
+				{ opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+				"-=0.4" // staggered animation
+			);
+		});
+
+		return () => tl.kill();
+	}, []);
 
 	const onTabClicked = (index) => {
 		if (index !== activeTabId) {
@@ -64,7 +97,7 @@ const Experience = () => {
 	];
 
 	return (
-		<section id="jobs" className="flex flex-col p-3 py-8 ">
+		<section id="jobs" ref={sectionRef} className="flex flex-col p-3 py-8 ">
 			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
