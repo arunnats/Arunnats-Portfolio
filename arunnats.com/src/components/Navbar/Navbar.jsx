@@ -6,7 +6,7 @@ const Navbar = () => {
 
 	return (
 		<div
-			className={`navbar bg-base-100 fixed top-0 w-full transition-transform duration-300 ${
+			className={`navbar bg-base-100 fixed top-0 w-full transition-transform duration-300 z-50 ${
 				scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
 			}`}
 		>
