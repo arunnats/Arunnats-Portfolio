@@ -5,7 +5,7 @@ import github from "../../assets/logos/icons8-github.svg";
 
 const Socials = () => {
 	return (
-		<div className="w-[6vw] h-screen bg-base-100 flex flex-col justify-end items-center pl-4">
+		<div className="w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pl-4">
 			<a href="https://www.linkedin.com/in/arunnats/">
 				<img src={linkedin} alt="LinkedIn" className="w-8 h-8 m-2" />
 			</a>
