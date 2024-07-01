@@ -69,26 +69,26 @@ const Featured = () => {
 							ref={(el) => (revealProjects.current[i] = el)}
 							className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8"
 						>
-							<div className="col-span-6 md:col-span-5 my-auto">
-								<div className="relative">
-									<a
-										href={
-											frontmatter.external
-												? frontmatter.external
-												: frontmatter.github
-												? frontmatter.github
-												: "#"
-										}
-										target="_blank"
-										rel="nofollow noopener noreferrer"
-									>
-										<img
-											src={frontmatter.cover.src}
-											alt={frontmatter.cover.alt}
-											className=""
-										/>
-									</a>
-								</div>
+							<div className="col-span-6 md:col-span-5 my-auto relative group">
+								<a
+									href={
+										frontmatter.external
+											? frontmatter.external
+											: frontmatter.github
+											? frontmatter.github
+											: "#"
+									}
+									target="_blank"
+									rel="nofollow noopener noreferrer"
+									className="block"
+								>
+									<img
+										src={frontmatter.cover.src}
+										alt={frontmatter.cover.alt}
+										className="w-full"
+									/>
+									<div className="absolute inset-0 bg-secondary-content opacity-60 group-hover:opacity-20 transition-opacity duration-300"></div>
+								</a>
 							</div>
 
 							<div className="col-span-6 md:col-span-7">
@@ -135,7 +135,7 @@ const Featured = () => {
 												className="text-lightestSlate hover:text-primary mr-4"
 												aria-label="GitHub Link"
 											>
-												<img className="w-12 h-12" src={github} alt="" />
+												<img className="w-12 h-12" src={github} alt="GitHub" />
 											</a>
 										)}
 										{frontmatter.external && (
