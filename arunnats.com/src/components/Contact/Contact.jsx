@@ -12,8 +12,8 @@ const Languages = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 85%",
-				end: "top 65%",
+				start: "top 95%",
+				end: "top 75%",
 				scrub: true,
 				markers: false,
 			},
@@ -42,22 +42,22 @@ const Languages = () => {
 			<h2 className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-1">
 				Reach me at
 			</h2>
-			<div className="flex flex-row items-center m-3 max-w-[70%]">
-				<h1 className=" text-secondary text-xl font-poppins mt-2">
+			<div className=" m-3 max-w-[70%]">
+				<h1 className="text-secondary text-lg md:text-xl font-poppins mt-2">
 					Send me an email at
 				</h1>
 				<a
 					ref={mailRef}
 					href="mailto:arunnats2004@gmail.com"
-					className="ml-2 text-3xl font-space font-bold text-primary hover:underline "
+					className="text-xl md:text-2xl font-space font-bold text-primary hover:underline"
 				>
 					arunnats2004@gmail.com
 				</a>
+				<h1 className="max-w-[100%] text-secondary text-lg md:text-xl font-poppins ">
+					and let's discuss how we can take over the world with sentient robot
+					cats.
+				</h1>
 			</div>
-			<h1 className="m-3 max-w-[80%]  text-secondary text-xl font-poppins mt-1">
-				and lets discuss how we can take over the world with sentient robot
-				cats.
-			</h1>
 		</section>
 	);
 };

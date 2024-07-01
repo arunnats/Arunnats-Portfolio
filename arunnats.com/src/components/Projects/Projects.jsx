@@ -76,8 +76,8 @@ const Projects = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: projectsRef.current,
-				start: "top 87%",
-				end: "top 62%",
+				start: "top 90%",
+				end: "top 67%",
 				scrub: true,
 				markers: false,
 			},
