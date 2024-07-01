@@ -18,8 +18,8 @@ const Featured = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 90%",
-				end: "top 70%",
+				start: "top 80%",
+				end: "top 65%",
 				scrub: true,
 				markers: false,
 			},
