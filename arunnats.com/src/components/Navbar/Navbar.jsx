@@ -27,13 +27,13 @@ const Navbar = () => {
 			<div className="flex-none">
 				<ul className="menu menu-horizontal flex justify-center px-1">
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[0] = el)} href="#about">
-							About
+						<a ref={(el) => (menuItemsRef.current[0] = el)} href="#experience">
+							Experience
 						</a>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[1] = el)} href="#experience">
-							Experience
+						<a ref={(el) => (menuItemsRef.current[1] = el)} href="#skills">
+							Skills
 						</a>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">

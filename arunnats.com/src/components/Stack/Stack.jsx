@@ -5,7 +5,7 @@ import Libraries from "../Libraries/Libraries";
 
 const Stack = () => {
 	return (
-		<div id="stack">
+		<div id="skills">
 			<Languages />
 			<Frameworks />
 			<Libraries />

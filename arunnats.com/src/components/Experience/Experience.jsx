@@ -97,7 +97,11 @@ const Experience = () => {
 	];
 
 	return (
-		<section id="jobs" ref={sectionRef} className="flex flex-col p-3 py-8 ">
+		<section
+			id="experience"
+			ref={sectionRef}
+			className="flex flex-col p-3 py-8 "
+		>
 			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
