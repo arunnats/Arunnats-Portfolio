@@ -14,8 +14,8 @@ const Experience = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 87%",
-				end: "top 73%",
+				start: "top 90%",
+				end: "top 78%",
 				scrub: true,
 				markers: false, // for debug, remove in production
 			},
