@@ -83,7 +83,7 @@ const Languages = () => {
 						<img
 							src={item.icon}
 							alt={item.title}
-							className="w-12 h-12 mx-2 transition-transform transform hover:translate-y-[-5px]"
+							className="w-12 h-12 mx-2 transition-transform -transform hover:translatey-[-5px]"
 						/>
 						<h3 className="text-lg font-semibold mt-2 text-secondary">
 							{item.title}

@@ -70,8 +70,8 @@ const Projects = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: projectsRef.current,
-				start: "top 90%",
-				end: "top 65%",
+				start: "top 87%",
+				end: "top 62%",
 				scrub: true,
 				markers: false,
 			},
@@ -114,7 +114,7 @@ const Projects = () => {
 						<div
 							key={i}
 							ref={(el) => (revealProjects.current[i] = el)}
-							className="text-primary p-6 rounded-md transition-transform transform hover:translate-y-[-5px]"
+							className="text-primary p-6 rounded-md "
 						>
 							<div className="flex justify-start items-center mb-2">
 								<a

@@ -18,8 +18,18 @@ const Featured = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 90%",
-				end: "top 65%",
+				start: "top 85%",
+				end: "top 60%",
+				scrub: true,
+				markers: false,
+			},
+		});
+
+		const tl2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: sectionRef.current,
+				start: "top 67%",
+				end: "top 20%",
 				scrub: true,
 				markers: false,
 			},
@@ -39,7 +49,7 @@ const Featured = () => {
 		);
 
 		revealProjects.current.forEach((item, index) => {
-			tl.fromTo(
+			tl2.fromTo(
 				item,
 				{ opacity: 0, y: 20 },
 				{ opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
@@ -106,7 +116,6 @@ const Featured = () => {
 					{featuredProjects.map(({ frontmatter, html }, i) => (
 						<div
 							key={i}
-							ref={(el) => (revealProjects.current[i] = el)}
 							className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-8"
 						>
 							<div className="col-span-7 md:col-span-6 my-auto relative group">
@@ -131,7 +140,10 @@ const Featured = () => {
 								</a>
 							</div>
 
-							<div className="col-span-5 md:col-span-6 ">
+							<div
+								ref={(el) => (revealProjects.current[i] = el)}
+								className="col-span-5 md:col-span-6 "
+							>
 								<div className=" p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
 									<h4 className="text-smish font-space font-bold text-secondary mb-2">
 										Featured Project
