@@ -114,13 +114,13 @@ const Projects = () => {
 			>
 				Other Projects
 			</h2>
-			<div ref={projectsRef} className="container mx-auto px-4">
+			<div ref={projectsRef} className="container md:mx-auto px-4">
 				<div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 					{projectsToShow.map(({ frontmatter, github, external }, i) => (
 						<div
 							key={i}
 							ref={(el) => (revealProjects.current[i] = el)}
-							className="text-primary p-6 border-b-4 border-secondary-content "
+							className="text-primary p-1 md:p-6 border-b-4 border-secondary-content "
 						>
 							<div className="flex justify-start items-center mb-2 ">
 								{github && (
@@ -165,7 +165,7 @@ const Projects = () => {
 								)}
 							</div>
 							<div
-								className="text-lg leading-relaxed mb-4 font-roboto text-secondary text-justify"
+								className="text-sm md:text-lg leading-relaxed mb-4 font-roboto text-secondary text-justify"
 								dangerouslySetInnerHTML={{ __html: frontmatter.html }}
 							/>
 							{frontmatter.tech && (
@@ -173,7 +173,7 @@ const Projects = () => {
 									{frontmatter.tech.map((item, i) => (
 										<li
 											key={i}
-											className="text-sm font-space font-bold text-secondary mr-2 mb-1"
+											className="text-xs md:text-sm font-space font-bold text-secondary mr-2 mb-1"
 										>
 											{item}
 										</li>

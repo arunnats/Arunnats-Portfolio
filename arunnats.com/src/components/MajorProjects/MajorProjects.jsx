@@ -151,7 +151,7 @@ const Featured = () => {
 
 							<div
 								ref={(el) => (revealProjects.current[i] = el)}
-								className="col-span-5 md:col-span-6 "
+								className="col-span-7 md:col-span-6 "
 							>
 								<div className="p-1 md:p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
 									<h4 className="text-sm md:text-base font-space font-bold text-secondary mb-2">
@@ -180,7 +180,7 @@ const Featured = () => {
 											{frontmatter.tech.map((tech, i) => (
 												<li
 													key={i}
-													className="font-space font-semibold text-sm md:text-smish text-secondary mr-2 mb-2 whitespace-nowrap"
+													className="font-space font-semibold text-xs md:text-smish text-secondary mr-2 mb-2 whitespace-nowrap"
 												>
 													{tech}
 												</li>
@@ -196,7 +196,11 @@ const Featured = () => {
 												className="text-lightestSlate hover:text-primary mr-4"
 												aria-label="GitHub Link"
 											>
-												<img className="w-12 h-12" src={github} alt="GitHub" />
+												<img
+													className="lg:w-12 lg:h-12 md:w-10 md:h-10 h-8 w-8"
+													src={github}
+													alt="GitHub"
+												/>
 											</a>
 										)}
 										{frontmatter.external && (
