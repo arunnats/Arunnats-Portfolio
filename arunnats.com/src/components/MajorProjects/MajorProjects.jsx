@@ -153,7 +153,7 @@ const Featured = () => {
 								ref={(el) => (revealProjects.current[i] = el)}
 								className="col-span-7 md:col-span-6 "
 							>
-								<div className="p-1 md:p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
+								<div className="p-1 md:p-6 border-r-2 md:border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
 									<h4 className="text-sm md:text-base font-space font-bold text-secondary mb-2">
 										Featured Project
 									</h4>
