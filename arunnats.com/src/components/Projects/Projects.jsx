@@ -110,7 +110,7 @@ const Projects = () => {
 		<section className="py-3 bg-base-100 p-3">
 			<h2
 				ref={titleRef}
-				className="text-3xl font-bold font-poppins text-primary mb-8"
+				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8"
 			>
 				Other Projects
 			</h2>

@@ -77,7 +77,7 @@ const AboutSection = () => {
 				</h4>
 				<p
 					ref={descriptionRef}
-					className="2xl:text-3xl lg:text-lg text-primary font-roboto text-justify mb-5"
+					className="2xl:text-3xl lg:text-lg text-sm text-primary font-roboto md:text-justify mb-5"
 				>
 					I am a year three student at{" "}
 					<a

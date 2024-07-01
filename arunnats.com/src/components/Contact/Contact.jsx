@@ -39,7 +39,7 @@ const Languages = () => {
 			id="contact"
 			className="flex flex-col p-3 bg-base-100 min-h-[40vh]"
 		>
-			<h2 className="text-3xl font-bold font-poppins text-primary mb-1">
+			<h2 className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-1">
 				Reach me at
 			</h2>
 			<div className="flex flex-row items-center m-3 max-w-[70%]">

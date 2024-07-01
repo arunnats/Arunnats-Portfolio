@@ -102,7 +102,7 @@ const Experience = () => {
 			ref={sectionRef}
 			className="flex flex-col p-3 py-8"
 		>
-			<h2 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold font-poppins text-primary mb-8">
+			<h2 className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
 			<div className="flex flex-col md:flex-row max-w-2xl">

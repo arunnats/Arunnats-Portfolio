@@ -73,7 +73,7 @@ const Frameworks = () => {
 		<section id="frameworks" ref={sectionRef} className="flex flex-col p-3">
 			<h2
 				ref={headingRef}
-				className="text-3xl font-bold font-poppins text-primary mb-8"
+				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8"
 			>
 				Frameworks and Databases I like
 			</h2>

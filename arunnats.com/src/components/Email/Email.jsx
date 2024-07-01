@@ -29,7 +29,7 @@ const EmailCont = () => {
 	return (
 		<div
 			ref={emailRef}
-			className=" w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pr-4"
+			className="w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pr-4 sm:pr-2"
 		>
 			<a
 				className="text-black transform font-poppins rotate-90 text-xl mb-32"
