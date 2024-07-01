@@ -37,7 +37,7 @@ const Languages = () => {
 		<section
 			ref={sectionRef}
 			id="contact"
-			className="flex flex-col p-3 bg-base-100 min-h-[40vh]"
+			className="flex flex-col p-3 bg-base-100 min-h-[20vh]"
 		>
 			<h2 className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-1">
 				Reach me at

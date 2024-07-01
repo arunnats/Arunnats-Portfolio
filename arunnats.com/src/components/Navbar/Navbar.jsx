@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-scroll";
 import resume from "../../assets/resume/Arun-Natarajan-Resume.pdf";
 
 const Navbar = () => {
@@ -57,24 +58,56 @@ const Navbar = () => {
 						}`}
 					>
 						<li>
-							<a href="experience" className="text-sm">
+							<Link
+								to="experience"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+								className="text-sm"
+								onClick={toggleMenu}
+							>
 								Experience
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="skills" className="text-sm">
+							<Link
+								to="skills"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={600}
+								className="text-sm"
+								onClick={toggleMenu}
+							>
 								Skills
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="projects" className="text-sm">
+							<Link
+								to="projects"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={700}
+								className="text-sm"
+								onClick={toggleMenu}
+							>
 								Projects
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="contact" className="text-sm">
+							<Link
+								to="contact"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={950}
+								className="text-sm"
+								onClick={toggleMenu}
+							>
 								Contact
-							</a>
+							</Link>
 						</li>
 						<li>
 							<a
@@ -93,44 +126,60 @@ const Navbar = () => {
 					Arun Natarajan
 				</a>
 			</div>
-			<div className="navbar-center hidden lg:flex "></div>
+			<div className="navbar-center hidden lg:flex"></div>
 			<div className="navbar-end">
 				<ul className="menu menu-horizontal px-1 font-space font-semibold text-secondary hidden sm:flex">
 					<li>
-						<a
-							href="experience"
+						<Link
+							to="experience"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={500}
 							className="text-sm"
-							ref={(el) => (menuItemsRef.current[0] = el)}
+							onClick={toggleMenu}
 						>
 							Experience
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="skills"
+						<Link
+							to="skills"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={600}
 							className="text-sm"
-							ref={(el) => (menuItemsRef.current[1] = el)}
+							onClick={toggleMenu}
 						>
 							Skills
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="projects"
+						<Link
+							to="projects"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={700}
 							className="text-sm"
-							ref={(el) => (menuItemsRef.current[2] = el)}
+							onClick={toggleMenu}
 						>
 							Projects
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="contact"
+						<Link
+							to="contact"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={1000}
 							className="text-sm"
-							ref={(el) => (menuItemsRef.current[3] = el)}
+							onClick={toggleMenu}
 						>
 							Contact
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<a
@@ -138,7 +187,6 @@ const Navbar = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					className="btn btn-outline font-poppins text-secondary text-sm"
-					ref={(el) => (menuItemsRef.current[4] = el)}
 				>
 					Resume
 				</a>
