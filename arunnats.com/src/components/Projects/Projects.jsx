@@ -109,14 +109,14 @@ const Projects = () => {
 				Other Projects
 			</h2>
 			<div ref={projectsRef} className="container mx-auto px-4">
-				<div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+				<div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 					{projectsToShow.map(({ frontmatter, github }, i) => (
 						<div
 							key={i}
 							ref={(el) => (revealProjects.current[i] = el)}
-							className="text-primary p-6 rounded-md "
+							className="text-primary p-6 border-b-4 border-secondary-content "
 						>
-							<div className="flex justify-start items-center mb-2">
+							<div className="flex justify-start items-center mb-2 ">
 								<a
 									className="mr-2"
 									href={github}

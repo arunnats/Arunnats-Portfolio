@@ -12,7 +12,7 @@ const Languages = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 90%",
+				start: "top 85%",
 				end: "top 65%",
 				scrub: true,
 				markers: false,

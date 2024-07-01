@@ -73,33 +73,42 @@ const Featured = () => {
 					alt: "Book Mate",
 				},
 			},
-			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+			html: "<p>Bookmate is a fun website that helps you find your 'Book Mate' by adding your favorite books to your library and taking a quiz. Users are matched with like-minded readers using an ML model trained with reader data. Plus, personalized book recommendations are available on a dedicated page. You can discover your perfect book buddy with BookMate</p>",
 		},
 		{
 			frontmatter: {
 				external: "",
 				title: "FLiX",
-				tech: ["React.js", "Node.js", "GraphQL"],
+				tech: [
+					"Javascript",
+					"Python",
+					"React.js",
+					"Node.js",
+					"FastAPI",
+					"SciKit",
+					"Seaborn",
+					"MathPlotLib",
+				],
 				github: "https://github.com/arunnats/Flix",
 				cover: {
 					src: flix,
 					alt: "Flix",
 				},
 			},
-			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+			html: "<p>Flix is a movie recommender app using the MovieLens database to provide personalized recommendations based on user preferences. It employs collaborative filtering and a correlation matrix from user ratings. Features include a recommendation engine, live search, and data visualization with graphs and charts for insights into movie ratings, genres, and other relevant information.</p>",
 		},
 		{
 			frontmatter: {
 				external: "",
 				title: "Movie Match",
-				tech: ["React.js", "Node.js", "GraphQL"],
+				tech: ["Javascript", "Python", "Node.js", "GPT-4"],
 				github: "https://github.com/arunnats/movie-match",
 				cover: {
 					src: movieMatch,
 					alt: "Movie Match",
 				},
 			},
-			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+			html: "<p>Movie Match, winners of GDSC Bit'N'Build Kerala Hackathon, offers a vast, daily-updated movie database from 1940 to mid-2023. Powered by GPT-4-turbo, it provides personalized recommendations, intuitive search, and detailed info pages with reviews, IMDB links, and streaming service details for a seamless experience.<</p>",
 		},
 	];
 
