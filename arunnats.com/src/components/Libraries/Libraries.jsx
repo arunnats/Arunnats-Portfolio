@@ -21,8 +21,8 @@ const Libraries = () => {
 		const tlLib = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 80%",
-				end: "top 65%",
+				start: "top 70%",
+				end: "top 55%",
 				scrub: true,
 				markers: false,
 			},
