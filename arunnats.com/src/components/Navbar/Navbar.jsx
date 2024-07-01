@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import resume from "../../assets/resume/Arun-Natarajan-Resume.pdf";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
 	const logoRef = useRef(null);
@@ -27,27 +29,55 @@ const Navbar = () => {
 			<div className="flex-none">
 				<ul className="menu menu-horizontal flex justify-center px-1">
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[0] = el)} href="#experience">
+						<Link
+							to="experience"
+							spy={true}
+							smooth={true}
+							offset={-70} // Adjust offset as needed to accommodate fixed navbar height
+							duration={500}
+						>
 							Experience
-						</a>
+						</Link>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[1] = el)} href="#skills">
+						<Link
+							to="skills"
+							spy={true}
+							smooth={true}
+							offset={-70} // Adjust offset as needed
+							duration={500}
+						>
 							Skills
-						</a>
+						</Link>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[2] = el)} href="#projects">
+						<Link
+							to="projects"
+							spy={true}
+							smooth={true}
+							offset={-70} // Adjust offset as needed
+							duration={500}
+						>
 							Projects
-						</a>
+						</Link>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[3] = el)} href="#contact">
+						<Link
+							to="contact"
+							spy={true}
+							smooth={true}
+							offset={-70} // Adjust offset as needed
+							duration={500}
+						>
 							Contact
-						</a>
+						</Link>
 					</li>
 					<li className="justify-center font-bold text-md text-secondary font-space">
-						<a ref={(el) => (menuItemsRef.current[4] = el)} href="">
+						<a
+							ref={(el) => (menuItemsRef.current[4] = el)}
+							href={resume}
+							target="_blank"
+						>
 							<button className="btn btn-outline btn-md font-bold text-md text-secondary font-space">
 								Resume
 							</button>
