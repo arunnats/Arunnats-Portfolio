@@ -140,7 +140,7 @@ const AboutSection = () => {
 					ref={picRef}
 					src={picture}
 					alt="Profile"
-					className="w-[90%] m-auto h-auto p-7"
+					className="w-[90%] m-auto h-auto p-7 "
 				/>
 			</div>
 		</div>

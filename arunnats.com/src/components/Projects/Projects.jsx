@@ -6,11 +6,11 @@ import external from "../../assets/logos/icons8-external-link.svg";
 const Projects = () => {
 	const [showMore, setShowMore] = useState(false);
 
-	const GRID_LIMIT = 6; // Maximum projects to show initially
+	const GRID_LIMIT = 3; // Maximum projects to show initially
 	const projects = [
 		{
 			frontmatter: {
-				title: "Project 1",
+				title: "Harvest Buddy",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["React.js", "Tailwind CSS", "DaisyUI"],
 			},
@@ -18,7 +18,7 @@ const Projects = () => {
 		},
 		{
 			frontmatter: {
-				title: "Project 2",
+				title: "Youtube Video Converter",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
@@ -26,7 +26,7 @@ const Projects = () => {
 		},
 		{
 			frontmatter: {
-				title: "Project 2",
+				title: "Instagram Likes Analyser",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
@@ -34,7 +34,7 @@ const Projects = () => {
 		},
 		{
 			frontmatter: {
-				title: "Project 2",
+				title: "Minutes Maker",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
@@ -42,7 +42,7 @@ const Projects = () => {
 		},
 		{
 			frontmatter: {
-				title: "Project 2",
+				title: "FairPlay",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
@@ -50,45 +50,12 @@ const Projects = () => {
 		},
 		{
 			frontmatter: {
-				title: "Project 2",
+				title: "StoryGPT",
 				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
 			github: "https://github.com/example/project2",
 		},
-		{
-			frontmatter: {
-				title: "Project 2",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-			},
-			github: "https://github.com/example/project2",
-		},
-		{
-			frontmatter: {
-				title: "Project 2",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-			},
-			github: "https://github.com/example/project2",
-		},
-		{
-			frontmatter: {
-				title: "Project 2",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-			},
-			github: "https://github.com/example/project2",
-		},
-		{
-			frontmatter: {
-				title: "Project 2",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-			},
-			github: "https://github.com/example/project2",
-		},
-		// Add more projects as needed
 	];
 
 	const projectsToShow = showMore ? projects : projects.slice(0, GRID_LIMIT);
@@ -124,7 +91,7 @@ const Projects = () => {
 								</a>
 							</div>
 							<div
-								className="text-lg leading-relaxed mb-4 text-justify"
+								className="text-lg leading-relaxed mb-4 font-roboto text-secondary text-justify"
 								dangerouslySetInnerHTML={{ __html: frontmatter.html }}
 							/>
 							{frontmatter.tech && (
