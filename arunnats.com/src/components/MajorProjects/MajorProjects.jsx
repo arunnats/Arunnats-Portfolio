@@ -56,20 +56,22 @@ const Featured = () => {
 	];
 
 	return (
-		<section id="projects" className="py-3 bg-base-100">
+		<section id="projects" className="py-3 bg-base-100 p-3">
+			<h2
+				ref={revealTitle}
+				className="text-3xl font-bold font-poppins text-primary mb-8"
+			>
+				Some Things I've Built
+			</h2>
 			<div className="container mx-auto px-4">
-				<h2 ref={revealTitle} className="text-3xl font-bold text-primary mb-8">
-					Some Things I've Built
-				</h2>
-
 				<div>
 					{featuredProjects.map(({ frontmatter, html }, i) => (
 						<div
 							key={i}
 							ref={(el) => (revealProjects.current[i] = el)}
-							className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8"
+							className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-8"
 						>
-							<div className="col-span-6 md:col-span-5 my-auto relative group">
+							<div className="col-span-7 md:col-span-6 my-auto relative group">
 								<a
 									href={
 										frontmatter.external
@@ -87,11 +89,11 @@ const Featured = () => {
 										alt={frontmatter.cover.alt}
 										className="w-full"
 									/>
-									<div className="absolute inset-0 bg-secondary-content opacity-60 group-hover:opacity-20 transition-opacity duration-300"></div>
+									<div className="absolute inset-0 bg-secondary-content opacity-60 group-hover:opacity-20 transition-opacity duration-300 border-l-4"></div>
 								</a>
 							</div>
 
-							<div className="col-span-6 md:col-span-7">
+							<div className="col-span-5 md:col-span-6">
 								<div className="bg-lightNavy text-lightSlate p-6 border-r-4 border-secondary-content">
 									<h4 className="text-smish font-space font-bold text-secondary mb-2">
 										Featured Project
@@ -111,7 +113,7 @@ const Featured = () => {
 										)}
 									</h5>
 									<div
-										className="text-lg leading-relaxed font-roboto mb-4"
+										className="text-lg leading-relaxed font-roboto mb-4 text-justify"
 										dangerouslySetInnerHTML={{ __html: html }}
 									/>
 									{frontmatter.tech && (
