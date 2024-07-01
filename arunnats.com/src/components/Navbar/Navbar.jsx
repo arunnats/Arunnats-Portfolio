@@ -129,7 +129,7 @@ const Navbar = () => {
 			<div className="navbar-center hidden lg:flex"></div>
 			<div className="navbar-end">
 				<ul className="menu menu-horizontal px-1 font-space font-semibold text-secondary hidden sm:flex">
-					<li>
+					<li ref={(el) => (menuItemsRef.current[0] = el)} className="my-auto">
 						<Link
 							to="experience"
 							spy={true}
@@ -142,7 +142,7 @@ const Navbar = () => {
 							Experience
 						</Link>
 					</li>
-					<li>
+					<li ref={(el) => (menuItemsRef.current[1] = el)} className="my-auto">
 						<Link
 							to="skills"
 							spy={true}
@@ -155,7 +155,7 @@ const Navbar = () => {
 							Skills
 						</Link>
 					</li>
-					<li>
+					<li ref={(el) => (menuItemsRef.current[2] = el)} className="my-auto">
 						<Link
 							to="projects"
 							spy={true}
@@ -168,7 +168,7 @@ const Navbar = () => {
 							Projects
 						</Link>
 					</li>
-					<li>
+					<li ref={(el) => (menuItemsRef.current[3] = el)} className="my-auto">
 						<Link
 							to="contact"
 							spy={true}
@@ -181,15 +181,17 @@ const Navbar = () => {
 							Contact
 						</Link>
 					</li>
+					<li ref={(el) => (menuItemsRef.current[4] = el)}>
+						<a
+							href={resume}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-outline font-poppins text-secondary text-sm"
+						>
+							Resume
+						</a>
+					</li>
 				</ul>
-				<a
-					href={resume}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="btn btn-outline font-poppins text-secondary text-sm"
-				>
-					Resume
-				</a>
 			</div>
 		</div>
 	);
