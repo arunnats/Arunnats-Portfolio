@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Import your icons here
 import c from "../../assets/logos/icons8-c.svg";
 import cpp from "../../assets/logos/icons8-cpp.svg";
 import python from "../../assets/logos/icons8-python.svg";
@@ -14,33 +15,21 @@ const Languages = () => {
 	const itemsRef = useRef([]);
 
 	useEffect(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		const tlLang = gsap.timeline({
-			scrollTrigger: {
-				trigger: sectionRef.current,
-				start: "top 100%",
-				end: "top 80%",
-				scrub: true,
-				markers: false,
-			},
-		});
-
-		tlLang.fromTo(
+		gsap.fromTo(
 			sectionRef.current,
 			{ opacity: 0, y: 50 },
 			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" }
 		);
 
-		tlLang.fromTo(
+		gsap.fromTo(
 			headingRef.current,
 			{ opacity: 0, y: 50 },
 			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-			"<" // ensures heading animation starts immediately after section animation starts
+			"<"
 		);
 
 		itemsRef.current.forEach((item, index) => {
-			tlLang.fromTo(
+			gsap.fromTo(
 				item,
 				{ opacity: 0, y: 20 },
 				{
@@ -50,11 +39,9 @@ const Languages = () => {
 					ease: "power2.out",
 					delay: index * 0.1,
 				},
-				"<" // ensures items animate after heading animation starts
+				"<"
 			);
 		});
-
-		return () => tlLang.kill();
 	}, []);
 
 	const langData = [
@@ -78,12 +65,12 @@ const Languages = () => {
 					<div
 						key={index}
 						ref={(el) => (itemsRef.current[index] = el)}
-						className="flex flex-col items-center mx-8 "
+						className="flex flex-col items-center mx-8"
 					>
 						<img
 							src={item.icon}
 							alt={item.title}
-							className="w-12 h-12 mx-2 transition-transform -transform hover:translatey-[-5px]"
+							className="w-auto min-w-[100px] h-12 mx-2 object-contain transition-transform transform hover:translate-y-[-5px]"
 						/>
 						<h3 className="text-lg font-semibold mt-2 text-secondary">
 							{item.title}

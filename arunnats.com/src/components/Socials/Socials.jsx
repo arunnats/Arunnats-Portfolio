@@ -41,7 +41,7 @@ const Socials = () => {
 				<img src={github} alt="GitHub" className="w-8 h-8 m-2" />
 			</a>
 			<a href="https://leetcode.com/u/arunnats2004/">
-				<img src={leetcode} alt="LeetCode" className="w-8 h-8 m-2" />
+				<img src={leetcode} alt="LeetCode" className="w-8 h-auto m-2" />
 			</a>
 			<div className="w-full flex justify-center">
 				<div className="bottom-0 h-[11vh] w-0.5 bg-gray-800"></div>
