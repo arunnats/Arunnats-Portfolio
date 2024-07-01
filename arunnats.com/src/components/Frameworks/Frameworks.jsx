@@ -21,8 +21,8 @@ const Frameworks = () => {
 		const tlFrame = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 100%",
-				end: "top 80%",
+				start: "top 97%",
+				end: "top 75%",
 				scrub: true,
 				markers: false,
 			},
@@ -73,23 +73,25 @@ const Frameworks = () => {
 		<section id="frameworks" ref={sectionRef} className="flex flex-col p-3">
 			<h2
 				ref={headingRef}
-				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8"
+				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-2 md:mb-6"
 			>
 				Frameworks and Databases I like
 			</h2>
-			<div className="flex flex-row justify-start m-3 max-w-[70%]">
+			<div className="flex flex-wrap justify-start my-2">
 				{frameData.map((item, index) => (
 					<div
 						key={index}
 						ref={(el) => (itemsRef.current[index] = el)}
-						className="flex flex-col items-center mx-8"
+						className="flex flex-col items-center mx-4 md:mx-8 mb-4"
+						style={{ width: "60px" }}
 					>
 						<img
 							src={item.icon}
 							alt={item.title}
-							className="w-auto min-w-[100px] h-12 mx-2 object-contain transition-transform transform hover:translate-y-[-5px]"
+							className="w-auto h-8 md:h-10 lg:h-12 mx-2 object-contain transition-transform transform hover:translate-y-[-5px]"
+							style={{ maxWidth: "100%" }}
 						/>
-						<h3 className="text-lg font-semibold mt-2 text-secondary">
+						<h3 className="text-sm md:text-lg font-semibold mt-2 text-secondary text-center">
 							{item.title}
 						</h3>
 					</div>

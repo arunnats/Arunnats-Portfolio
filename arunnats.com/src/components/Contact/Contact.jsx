@@ -43,17 +43,17 @@ const Languages = () => {
 				Reach me at
 			</h2>
 			<div className=" m-3 max-w-[70%]">
-				<h1 className="text-secondary text-lg md:text-xl font-poppins mt-2">
+				<h1 className="text-secondary text-md md:text-xl font-poppins mt-2">
 					Send me an email at
 				</h1>
 				<a
 					ref={mailRef}
 					href="mailto:arunnats2004@gmail.com"
-					className="text-xl md:text-2xl font-space font-bold text-primary hover:underline"
+					className="text-lg md:text-2xl font-space font-bold text-primary hover:underline"
 				>
 					arunnats2004@gmail.com
 				</a>
-				<h1 className="max-w-[100%] text-secondary text-lg md:text-xl font-poppins ">
+				<h1 className="max-w-[100%] text-secondary text-md md:text-xl font-poppins ">
 					and let's discuss how we can take over the world with sentient robot
 					cats.
 				</h1>

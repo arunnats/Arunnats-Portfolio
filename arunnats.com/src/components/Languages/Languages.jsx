@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-
-// Import your icons here
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import c from "../../assets/logos/icons8-c.svg";
 import cpp from "../../assets/logos/icons8-cpp.svg";
 import python from "../../assets/logos/icons8-python.svg";
@@ -15,13 +14,25 @@ const Languages = () => {
 	const itemsRef = useRef([]);
 
 	useEffect(() => {
-		gsap.fromTo(
+		gsap.registerPlugin(ScrollTrigger);
+
+		const tlFrame = gsap.timeline({
+			scrollTrigger: {
+				trigger: sectionRef.current,
+				start: "top 97%",
+				end: "top 75%",
+				scrub: true,
+				markers: false,
+			},
+		});
+
+		tlFrame.fromTo(
 			sectionRef.current,
 			{ opacity: 0, y: 50 },
 			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" }
 		);
 
-		gsap.fromTo(
+		tlFrame.fromTo(
 			headingRef.current,
 			{ opacity: 0, y: 50 },
 			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" },
@@ -29,7 +40,7 @@ const Languages = () => {
 		);
 
 		itemsRef.current.forEach((item, index) => {
-			gsap.fromTo(
+			tlFrame.fromTo(
 				item,
 				{ opacity: 0, y: 20 },
 				{
@@ -42,6 +53,8 @@ const Languages = () => {
 				"<"
 			);
 		});
+
+		return () => tlFrame.kill();
 	}, []);
 
 	const langData = [
@@ -49,30 +62,32 @@ const Languages = () => {
 		{ title: "C++", icon: cpp },
 		{ title: "Python", icon: python },
 		{ title: "JavaScript", icon: js },
-		{ title: "Shell Script", icon: bash },
+		{ title: "Shell", icon: bash },
 	];
 
 	return (
-		<section id="languages" ref={sectionRef} className="flex flex-col p-3">
+		<section id="languages" ref={sectionRef} className="flex flex-col px-3">
 			<h2
 				ref={headingRef}
-				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8"
+				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-2 md:mb-6"
 			>
 				Languages I speak
 			</h2>
-			<div className="flex flex-row justify-start m-3 max-w-[70%] ">
+			<div className="flex flex-wrap justify-start my-2">
 				{langData.map((item, index) => (
 					<div
 						key={index}
 						ref={(el) => (itemsRef.current[index] = el)}
-						className="flex flex-col items-center mx-8"
+						className="flex flex-col items-center mx-4 md:mx-8 mb-4"
+						style={{ width: "60px" }}
 					>
 						<img
 							src={item.icon}
 							alt={item.title}
-							className="w-auto min-w-[100px] h-12 mx-2 object-contain transition-transform transform hover:translate-y-[-5px]"
+							className="w-auto h-8 md:h-10 lg:h-12 mx-2 object-contain transition-transform transform hover:translate-y-[-5px]"
+							style={{ maxWidth: "100%" }}
 						/>
-						<h3 className="text-lg font-semibold mt-2 text-secondary">
+						<h3 className="text-sm md:text-lg font-semibold mt-2 text-secondary text-center">
 							{item.title}
 						</h3>
 					</div>
