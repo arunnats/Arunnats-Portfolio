@@ -117,7 +117,7 @@ const Experience = () => {
 							aria-selected={activeTabId === i ? true : false}
 							aria-controls={`panel-${i}`}
 							tabIndex={activeTabId === i ? "0" : "-1"}
-							className={`btn-square btn-ghost w-full text-left py-2 px-4 min-w-[150px] ${
+							className={`btn-square btn-ghost w-full text-left font-space font-bold text-sm py-2 px-4 min-w-[150px] ${
 								activeTabId === i
 									? "border-l-4 border-t-0 border-b-0 border-r-0 border-primary"
 									: "border-l-4 border-t-0 border-b-0 border-r-0 border-secondary-content"

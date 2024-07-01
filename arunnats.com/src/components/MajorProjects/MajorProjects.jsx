@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import github from "../../assets/logos/icons8-github.svg";
 
 const Featured = () => {
 	const revealTitle = useRef(null);
@@ -40,9 +41,9 @@ const Featured = () => {
 	];
 
 	return (
-		<section id="projects" className="py-12 bg-white">
+		<section id="projects" className="py-3 bg-base-100">
 			<div className="container mx-auto px-4">
-				<h2 ref={revealTitle} className="text-4xl font-bold text-primary mb-8">
+				<h2 ref={revealTitle} className="text-3xl font-bold text-primary mb-8">
 					Some Things I've Built
 				</h2>
 
@@ -69,24 +70,24 @@ const Featured = () => {
 										<img
 											src={frontmatter.cover.src}
 											alt={frontmatter.cover.alt}
-											className="rounded-lg"
+											className="border-l-4 border-primary"
 										/>
 									</a>
 								</div>
 							</div>
 
 							<div className="col-span-6 md:col-span-7">
-								<div className="bg-lightNavy text-lightSlate p-6 rounded-lg shadow-lg">
-									<h4 className="text-smish font-mono text-green mb-2">
+								<div className="bg-lightNavy text-lightSlate p-6 border-r-4 border-secondary-content">
+									<h4 className="text-smish font-space font-bold text-secondary mb-2">
 										Featured Project
 									</h4>
-									<h5 className="text-2xl md:text-3xl text-lightestSlate mb-4">
+									<h5 className="text-2xl md:text-3xl text-primary font-poppins font-semibold mb-4">
 										{frontmatter.external ? (
 											<a
 												href={frontmatter.external}
 												target="_blank"
 												rel="nofollow noopener noreferrer"
-												className="hover:text-primary"
+												className="hover:text-secondary"
 											>
 												{frontmatter.title}
 											</a>
@@ -95,7 +96,7 @@ const Featured = () => {
 										)}
 									</h5>
 									<div
-										className="text-lg leading-relaxed mb-4"
+										className="text-lg leading-relaxed font-roboto mb-4"
 										dangerouslySetInnerHTML={{ __html: html }}
 									/>
 									{frontmatter.tech && (
@@ -103,7 +104,7 @@ const Featured = () => {
 											{frontmatter.tech.map((tech, i) => (
 												<li
 													key={i}
-													className="font-mono text-smish text-green mr-4 mb-2 whitespace-nowrap"
+													className="font-space font-semibold text-smish text-secondary mr-4 mb-2 whitespace-nowrap"
 												>
 													{tech}
 												</li>

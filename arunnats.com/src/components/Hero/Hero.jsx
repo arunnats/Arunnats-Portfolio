@@ -89,7 +89,7 @@ const AboutSection = () => {
 					>
 						NIT Calicut
 					</a>
-					, doing Computer Science and Engineering. I build website, train AI
+					, doing Computer Science and Engineering. I build websites, train AI
 					models and do data science. I'm also a writer, designer and amateur
 					powerlifter! Learn more about me at:
 				</p>
