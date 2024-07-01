@@ -73,14 +73,18 @@ const Languages = () => {
 			>
 				Languages I speak
 			</h2>
-			<div className="flex flex-row justify-start m-3 max-w-[70%]">
+			<div className="flex flex-row justify-start m-3 max-w-[70%] ">
 				{langData.map((item, index) => (
 					<div
 						key={index}
 						ref={(el) => (itemsRef.current[index] = el)}
-						className="flex flex-col items-center mx-8"
+						className="flex flex-col items-center mx-8 "
 					>
-						<img src={item.icon} alt={item.title} className="w-12 h-12 mx-2" />
+						<img
+							src={item.icon}
+							alt={item.title}
+							className="w-12 h-12 mx-2 transition-transform transform hover:translate-y-[-5px]"
+						/>
 						<h3 className="text-lg font-semibold mt-2 text-secondary">
 							{item.title}
 						</h3>

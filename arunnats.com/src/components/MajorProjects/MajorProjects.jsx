@@ -131,8 +131,8 @@ const Featured = () => {
 								</a>
 							</div>
 
-							<div className="col-span-5 md:col-span-6">
-								<div className="bg-lightNavy text-lightSlate p-6 border-r-4 border-secondary-content">
+							<div className="col-span-5 md:col-span-6 ">
+								<div className=" p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
 									<h4 className="text-smish font-space font-bold text-secondary mb-2">
 										Featured Project
 									</h4>

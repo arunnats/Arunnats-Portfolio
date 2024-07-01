@@ -103,7 +103,7 @@ const Projects = () => {
 					{projectsToShow.map(({ frontmatter, github }, i) => (
 						<div
 							key={i}
-							className="bg-lightNavy text-lightSlate p-6 rounded-md \ transition-transform transform hover:translate-y-[-5px]"
+							className="text-primary p-6 rounded-md transition-transform transform hover:translate-y-[-5px]"
 						>
 							<div className="flex justify-start items-center mb-2">
 								<a className="mr-2" href="">
