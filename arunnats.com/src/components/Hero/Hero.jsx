@@ -5,6 +5,7 @@ import linkedin from "../../assets/logos/icons8-linkedin.svg";
 import github from "../../assets/logos/icons8-github.svg";
 import TypedAnimation from "../Typed/Typed";
 import { gsap } from "gsap";
+import resume from "../../assets/resume/Arun-Natarajan-Resume.pdf";
 
 const AboutSection = () => {
 	const hiRef = useRef(null);
@@ -124,12 +125,14 @@ const AboutSection = () => {
 						</a>
 					</li>
 					<li className="m-3 my-auto">
-						<button
-							ref={(el) => (logosRef.current[3] = el)}
-							className="btn btn-ghost btn-outline text-primary font-poppins"
-						>
-							Resume
-						</button>
+						<a href={resume} target="_blank">
+							<button
+								ref={(el) => (logosRef.current[3] = el)}
+								className="btn btn-ghost btn-outline text-primary font-poppins"
+							>
+								Resume
+							</button>
+						</a>
 					</li>
 				</ul>
 			</div>
