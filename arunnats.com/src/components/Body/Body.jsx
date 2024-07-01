@@ -5,6 +5,7 @@ import Stack from "../Stack/Stack";
 import Featured from "../MajorProjects/MajorProjects";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const BodyCont = () => {
 	return (
@@ -16,6 +17,7 @@ const BodyCont = () => {
 				<Featured />
 				<Projects />
 				<Contact />
+				<Footer />
 			</div>
 		</div>
 	);
