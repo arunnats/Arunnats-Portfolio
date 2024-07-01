@@ -3,6 +3,7 @@ import Hero from "../Hero/Hero";
 import Experience from "../Experience/Experience";
 import Stack from "../Stack/Stack";
 import Featured from "../MajorProjects/MajorProjects";
+import Projects from "../Projects/Projects";
 
 const BodyCont = () => {
 	return (
@@ -12,6 +13,7 @@ const BodyCont = () => {
 				<Experience />
 				<Stack />
 				<Featured />
+				<Projects />
 				<div className="min-h-[99vh]"></div>
 				<div className="text-9xl">aaaaaaaaaaa</div>
 			</div>

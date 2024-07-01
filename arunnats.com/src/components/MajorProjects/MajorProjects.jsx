@@ -1,15 +1,53 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import github from "../../assets/logos/icons8-github.svg";
 import flix from "../../assets/images/projects/flix.png";
 import movieMatch from "../../assets/images/projects/movieMatch.png";
 import bookMate from "../../assets/images/projects/bookMate.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Featured = () => {
 	const revealTitle = useRef(null);
+	const sectionRef = useRef(null);
 	const revealProjects = useRef([]);
+
 	useEffect(() => {
-		// Replace with your reveal logic if needed
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: sectionRef.current,
+				start: "top 90%",
+				end: "top 65%",
+				scrub: true,
+				markers: false,
+			},
+		});
+
+		tl.fromTo(
+			sectionRef.current,
+			{ opacity: 0, y: 50 },
+			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+		);
+
+		tl.fromTo(
+			revealTitle.current,
+			{ opacity: 0, y: 50 },
+			{ opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+			"<"
+		);
+
+		revealProjects.current.forEach((item, index) => {
+			tl.fromTo(
+				item,
+				{ opacity: 0, y: 20 },
+				{ opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+				`<${index * 0.2}`
+			);
+		});
+
+		return () => tl.kill();
 	}, []);
 
 	// Sample data
@@ -56,7 +94,7 @@ const Featured = () => {
 	];
 
 	return (
-		<section id="projects" className="py-3 bg-base-100 p-3">
+		<section ref={sectionRef} id="projects" className="py-3 bg-base-100 p-3">
 			<h2
 				ref={revealTitle}
 				className="text-3xl font-bold font-poppins text-primary mb-8"
