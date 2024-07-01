@@ -108,7 +108,7 @@ const Featured = () => {
 					alt: "Movie Match",
 				},
 			},
-			html: "<p>Movie Match, winners of GDSC Bit'N'Build Kerala Hackathon, offers a vast, daily-updated movie database from 1940 to mid-2023. Powered by GPT-4-turbo, it provides personalized recommendations, intuitive search, and detailed info pages with reviews, IMDB links, and streaming service details for a seamless experience.<</p>",
+			html: "<p>Movie Match, winners of GDSC Bit'N'Build Kerala Hackathon, offers a vast, daily-updated movie database from 1940 to mid-2023. Powered by GPT-4-turbo, it provides personalized recommendations, intuitive search, and detailed info pages with reviews, IMDB links, and streaming service details for a seamless experience.</p>",
 		},
 	];
 
@@ -172,7 +172,7 @@ const Featured = () => {
 										)}
 									</h5>
 									<div
-										className="text-lg leading-relaxed font-roboto mb-4 text-justify"
+										className="text-lg leading-relaxed font-roboto  mb-4 text-justify"
 										dangerouslySetInnerHTML={{ __html: html }}
 									/>
 									{frontmatter.tech && (

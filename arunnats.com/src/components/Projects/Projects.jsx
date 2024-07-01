@@ -15,50 +15,56 @@ const Projects = () => {
 		{
 			frontmatter: {
 				title: "Harvest Buddy",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+				html: "<p>Harvest Buddy, a finalist at GDSC Bit'N'Build Hackathon at CRCE Mumbai, helps farmers with smart inventory management, real-time alerts via SMS and and AI-driven recommendations. It integrates weather updates and OpenMapBox coordinates for comprehensive agricultural insights.</p>",
 				tech: ["React.js", "Tailwind CSS", "DaisyUI"],
 			},
 			github: "https://github.com/example/project1",
+			external: "",
 		},
 		{
 			frontmatter: {
 				title: "Youtube Video Converter",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+				html: "<p>The YouTube downloader converts YouTube URLs into downloadable files, ensuring seamless video retrieval and user interaction with efficient server-side logic and session management for a smooth experience.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
 			github: "https://github.com/example/project2",
+			external: "http://yt-converter.arunnats.com/",
 		},
-		{
-			frontmatter: {
-				title: "Instagram Likes Analyser",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-			},
-			github: "https://github.com/example/project2",
-		},
+		// {
+		// 	frontmatter: {
+		// 		title: "Instagram Likes Analyser",
+		// 		html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+		// 		tech: ["Vue.js", "Express.js", "MongoDB"],
+		// 	},
+		// 	github: "https://github.com/example/project3",
+		// 	external: "",
+		// },
 		{
 			frontmatter: {
 				title: "Minutes Maker",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+				html: "<p>Minutes Maker simplifies meeting documentation by transforming audio recordings into organized minutes with accurate transcriptions and concise summaries. It ensures efficient file handling and a user-friendly interface for seamless operation.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
-			github: "https://github.com/example/project2",
+			github: "https://github.com/example/project4",
+			external: "https://minutesmaker.arunnats.com/",
 		},
 		{
 			frontmatter: {
 				title: "FairPlay",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+				html: "<p>FairPlay, developed at CodeInit 2024 by NIT Calicut, offers an interactive platform to explore the historic Playfair Cipher. Encrypt and decrypt messages effortlessly, visualize the process step-by-step, and engage with a GPT-4-powered AI chatbot. Learn about the cipher's history and evolution.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
-			github: "https://github.com/example/project2",
+			github: "https://github.com/example/project5",
+			external: "",
 		},
 		{
 			frontmatter: {
 				title: "StoryGPT",
-				html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+				html: "<p>StoryGPT Emoji Story Generator uses OpenAI's GPT-3.5 Turbo and DALL-E to craft captivating narratives from user-input emojis and mood selections. Its user-friendly interface generates unique stories with semi-realistic images, perfect for creative writing, education, and entertainment.</p>",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 			},
-			github: "https://github.com/example/project2",
+			github: "https://github.com/example/project6",
+			external: "https://storygpt.arunnats.com/",
 		},
 	];
 
@@ -110,39 +116,53 @@ const Projects = () => {
 			</h2>
 			<div ref={projectsRef} className="container mx-auto px-4">
 				<div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-					{projectsToShow.map(({ frontmatter, github }, i) => (
+					{projectsToShow.map(({ frontmatter, github, external }, i) => (
 						<div
 							key={i}
 							ref={(el) => (revealProjects.current[i] = el)}
 							className="text-primary p-6 border-b-4 border-secondary-content "
 						>
 							<div className="flex justify-start items-center mb-2 ">
-								<a
-									className="mr-2"
-									href={github}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<img src={githubIcon} alt="Folder Icon" className="w-8 h-8" />
-								</a>
-								<a
-									className="mx-2"
-									href={github}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<button className="btn btn-outline btn-sm">Visit</button>
-								</a>
+								{github && (
+									<a
+										className="mr-2"
+										href={github}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img
+											src={githubIcon}
+											alt="GitHub Icon"
+											className="w-8 h-8"
+										/>
+									</a>
+								)}
+								{external && (
+									<a
+										className="mx-2"
+										href={external}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<button className="btn btn-outline btn-sm">Visit</button>
+									</a>
+								)}
 							</div>
 							<div className="flex">
-								<a
-									href={github}
-									target="_blank"
-									rel="nofollow noopener noreferrer"
-									className="text-primary font-poppins font-semibold text-lg hover:text-secondary"
-								>
-									{frontmatter.title}
-								</a>
+								{external ? (
+									<a
+										href={external}
+										target="_blank"
+										rel="nofollow noopener noreferrer"
+										className="text-primary font-poppins font-semibold text-lg hover:text-secondary"
+									>
+										{frontmatter.title}
+									</a>
+								) : (
+									<span className="text-primary font-poppins font-semibold text-lg">
+										{frontmatter.title}
+									</span>
+								)}
 							</div>
 							<div
 								className="text-lg leading-relaxed mb-4 font-roboto text-secondary text-justify"
