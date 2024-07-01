@@ -16,9 +16,9 @@ const EmailCont = () => {
 				opacity: 1,
 				scrollTrigger: {
 					trigger: emailRef.current,
-					start: "top 95%",
-					end: "top 25%",
-					scrub: true,
+					start: "top 95%", // when the top of the element is at the bottom of the viewport
+					end: "top 25%", // when the top of the element is 80% from the top of the viewport
+					scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
 				},
 				duration: 1,
 				ease: "power2.out",
@@ -29,7 +29,7 @@ const EmailCont = () => {
 	return (
 		<div
 			ref={emailRef}
-			className="hidden sm:flex sm:w-[5%] h-screen bg-base-100 flex flex-col justify-end items-center pr-4"
+			className=" w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pr-4"
 		>
 			<a
 				className="text-black transform font-poppins rotate-90 text-xl mb-32"

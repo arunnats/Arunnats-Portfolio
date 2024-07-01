@@ -32,7 +32,7 @@ const Socials = () => {
 	return (
 		<div
 			ref={socialsRef}
-			className="hidden sm:flex sm:w-[5%] h-screen bg-base-100 flex flex-col justify-end items-center pl-4 sm:pl-2"
+			className="md:w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pl-4 sm:pl-2"
 		>
 			<a href="https://www.linkedin.com/in/arunnats/">
 				<img src={linkedin} alt="LinkedIn" className="w-8 h-8 m-2" />

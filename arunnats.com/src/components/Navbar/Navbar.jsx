@@ -33,7 +33,7 @@ const Navbar = () => {
 					<div
 						tabIndex={0}
 						role="button"
-						className="btn btn-ghost lg:hidden"
+						className="btn btn-ghost lg:hidden text-sm"
 						onClick={toggleMenu}
 					>
 						<svg
@@ -65,6 +65,7 @@ const Navbar = () => {
 								offset={-70}
 								duration={500}
 								onClick={toggleMenu}
+								className="text-sm"
 							>
 								Experience
 							</Link>
@@ -77,6 +78,7 @@ const Navbar = () => {
 								offset={-70}
 								duration={580}
 								onClick={toggleMenu}
+								className="text-sm"
 							>
 								Skills
 							</Link>
@@ -89,6 +91,7 @@ const Navbar = () => {
 								offset={-70}
 								duration={680}
 								onClick={toggleMenu}
+								className="text-sm"
 							>
 								Projects
 							</Link>
@@ -101,6 +104,7 @@ const Navbar = () => {
 								offset={-70}
 								duration={950}
 								onClick={toggleMenu}
+								className="text-sm"
 							>
 								Contact
 							</Link>
@@ -132,6 +136,7 @@ const Navbar = () => {
 							smooth={true}
 							offset={-70}
 							duration={500}
+							className="text-sm"
 						>
 							Experience
 						</Link>
@@ -143,6 +148,7 @@ const Navbar = () => {
 							smooth={true}
 							offset={-70}
 							duration={580}
+							className="text-sm"
 						>
 							Skills
 						</Link>
@@ -154,6 +160,7 @@ const Navbar = () => {
 							smooth={true}
 							offset={-70}
 							duration={680}
+							className="text-sm"
 						>
 							Projects
 						</Link>
@@ -165,6 +172,7 @@ const Navbar = () => {
 							smooth={true}
 							offset={-70}
 							duration={950}
+							className="text-sm"
 						>
 							Contact
 						</Link>
@@ -174,7 +182,7 @@ const Navbar = () => {
 					href={resume}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="btn btn-outline font-poppins text-secondary"
+					className="btn btn-outline font-poppins text-secondary text-sm"
 				>
 					Resume
 				</a>

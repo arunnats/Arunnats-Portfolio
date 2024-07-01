@@ -116,7 +116,7 @@ const Featured = () => {
 		<section ref={sectionRef} id="projects" className="py-3 bg-base-100 p-3">
 			<h2
 				ref={revealTitle}
-				className="text-3xl font-bold font-poppins text-primary mb-8"
+				className="text-2xl md:text-3xl font-bold font-poppins text-primary mb-8"
 			>
 				Some Things I've Built
 			</h2>
@@ -127,7 +127,7 @@ const Featured = () => {
 							key={i}
 							className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-8"
 						>
-							<div className="col-span-7 md:col-span-6 my-auto relative group">
+							<div className="col-span-7 md:col-span-6 my-auto relative group border-l-4 border-secondary p-1">
 								<a
 									href={
 										frontmatter.external
@@ -143,9 +143,9 @@ const Featured = () => {
 									<img
 										src={frontmatter.cover.src}
 										alt={frontmatter.cover.alt}
-										className="w-full"
+										className="w-full "
 									/>
-									<div className="absolute inset-0 bg-secondary-content opacity-60 group-hover:opacity-20 transition-opacity duration-300 border-l-4"></div>
+									<div className="absolute inset-0 bg-secondary-content opacity-60 group-hover:opacity-20 transition-opacity duration-300 "></div>
 								</a>
 							</div>
 
@@ -153,11 +153,11 @@ const Featured = () => {
 								ref={(el) => (revealProjects.current[i] = el)}
 								className="col-span-5 md:col-span-6 "
 							>
-								<div className=" p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
-									<h4 className="text-smish font-space font-bold text-secondary mb-2">
+								<div className="p-1 md:p-6 border-r-4 border-secondary-content transition-transform transform hover:translate-y-[-5px]">
+									<h4 className="text-sm md:text-base font-space font-bold text-secondary mb-2">
 										Featured Project
 									</h4>
-									<h5 className="text-2xl md:text-3xl text-primary font-poppins font-semibold mb-4">
+									<h5 className="text-xl md:text-2xl text-primary font-poppins font-semibold md:mb-4 mb-2">
 										{frontmatter.external ? (
 											<a
 												href={frontmatter.external}
@@ -172,7 +172,7 @@ const Featured = () => {
 										)}
 									</h5>
 									<div
-										className="text-lg leading-relaxed font-roboto  mb-4 text-justify"
+										className="text-sm md:text-lg leading-relaxed font-roboto mb-2 md:mb-4 text-justify"
 										dangerouslySetInnerHTML={{ __html: html }}
 									/>
 									{frontmatter.tech && (
@@ -180,7 +180,7 @@ const Featured = () => {
 											{frontmatter.tech.map((tech, i) => (
 												<li
 													key={i}
-													className="font-space font-semibold text-smish text-secondary mr-4 mb-2 whitespace-nowrap"
+													className="font-space font-semibold text-sm md:text-smish text-secondary mr-2 mb-2 whitespace-nowrap"
 												>
 													{tech}
 												</li>
