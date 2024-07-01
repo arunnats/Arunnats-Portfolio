@@ -19,8 +19,8 @@ const Languages = () => {
 		const tlFrame = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 97%",
-				end: "top 75%",
+				start: "top 90%",
+				end: "top 70%",
 				scrub: true,
 				markers: false,
 			},
