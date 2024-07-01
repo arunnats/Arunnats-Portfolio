@@ -14,8 +14,8 @@ const Experience = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
-				start: "top 80%",
-				end: "top 50%",
+				start: "top 90%",
+				end: "top 60%",
 				scrub: true,
 				markers: false, // for debug, remove in production
 			},
@@ -32,7 +32,7 @@ const Experience = () => {
 				tabs.current[index],
 				{ opacity: 0, y: 20 },
 				{ opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
-				"-=0.4" // staggered animation
+				"-=0.4"
 			);
 		});
 
@@ -100,12 +100,12 @@ const Experience = () => {
 		<section
 			id="experience"
 			ref={sectionRef}
-			className="flex flex-col p-3 py-8 "
+			className="flex flex-col p-3 py-8"
 		>
-			<h2 className="text-3xl font-bold font-poppins text-primary mb-8">
+			<h2 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold font-poppins text-primary mb-8">
 				Where I've Worked
 			</h2>
-			<div className="flex flex-col md:flex-row max-w-[75%]">
+			<div className="flex flex-col md:flex-row max-w-2xl">
 				<div
 					role="tablist"
 					aria-label="Job tabs"
@@ -141,7 +141,7 @@ const Experience = () => {
 								activeTabId === i ? "opacity-100" : "opacity-0 hidden"
 							}`}
 						>
-							<h4 className="text-3xl font-bold text-primary-content font-poppins mb-2">
+							<h4 className="2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg text-base font-bold text-primary-content font-poppins mb-2">
 								{job.title}
 								<span className="text-primary ">
 									&nbsp;at&nbsp;
@@ -155,11 +155,11 @@ const Experience = () => {
 									</a>
 								</span>
 							</h4>
-							<h5 className="text-xl font-roboto font-bold text-primary mb-4">
+							<h5 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base text-sm font-roboto font-bold text-primary mb-4">
 								{job.range}
 							</h5>
 							<div
-								className="font-roboto text-lg text-primary text-justify"
+								className="2xl:text-xl xl:text-lg lg:text-base md:text-sm text-sm font-roboto text-primary text-justify"
 								dangerouslySetInnerHTML={{ __html: job.html }}
 							/>
 						</div>

@@ -8,7 +8,7 @@ const TypedAnimation = () => {
 				"Web Developer",
 				"Programmer",
 				"Writer",
-				"FOSS Enthusiast",
+				"FOSS Enjoyer",
 				"Data Scientist",
 				"Designer",
 				"Creator",

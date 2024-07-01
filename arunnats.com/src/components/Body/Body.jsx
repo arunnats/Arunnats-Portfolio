@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 
 const BodyCont = () => {
 	return (
-		<div className="w-[90vw] m-auto bg-base-100 min-h-svh overflow-hidden">
+		<div className="w-[95vw] md:w-[90vw] m-auto bg-base-100 min-h-svh overflow-hidden">
 			<div className="w-11/12 m-auto bg-base-100">
 				<Hero />
 				<Experience />

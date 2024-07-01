@@ -55,30 +55,29 @@ const AboutSection = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col md:flex-row items-center p-3 py-6">
-			<div className="w-4/6 2xl:w-2/3 mt-10">
+		<div className="flex flex-col md:flex-row items-center p-3 lg:py-6 py-3">
+			<div className="md:w-4/6 lg:w-2/3 mt-10 md:mt-0 sm:mt-0">
 				<h4
 					ref={hiRef}
-					className="2xl:text-3xl text-1xl font-semibold text-primary-content font-poppins text-left mb-2"
+					className="2xl:text-3xl text-2xl font-semibold text-primary-content font-poppins text-left mb-2"
 				>
 					Hi, my name is
 				</h4>
 				<h1
 					ref={nameRef}
-					className="2xl:text-8xl text-7xl font-poppins font-bold text-left mb-2"
+					className="2xl:text-8xl lg:text-7xl text-5xl font-poppins font-bold text-left mb-2"
 				>
-					{" "}
 					Arun Natarajan.
 				</h1>
 				<h4
 					ref={typedTextRef}
-					className="2xl:text-7xl text-5xl font-bold text-primary-content font-poppins text-left mb-3"
+					className="2xl:text-7xl lg:text-5xl text-2xl font-bold text-primary-content font-poppins text-left mb-3"
 				>
 					<TypedAnimation />
 				</h4>
 				<p
 					ref={descriptionRef}
-					className="2xl:text-3xl md:text-lg text-primary font-roboto text-justify mb-5"
+					className="2xl:text-3xl lg:text-lg text-primary font-roboto text-justify mb-5"
 				>
 					I am a year three student at{" "}
 					<a
@@ -93,34 +92,34 @@ const AboutSection = () => {
 					models and do data science. I'm also a writer, designer and amateur
 					powerlifter! Learn more about me at:
 				</p>
-				<ul className="flex flex-row">
-					<li>
+				<ul className="flex flex-wrap">
+					<li className="m-3">
 						<a href="https://www.linkedin.com/in/arunnats/">
 							<img
 								ref={(el) => (logosRef.current[0] = el)}
 								src={linkedin}
 								alt="LinkedIn"
-								className="w-12 h-12 m-3"
+								className="lg:w-12 lg:h-12 md:w-10 md:h-10 h-8 w-8"
 							/>
 						</a>
 					</li>
-					<li>
+					<li className="m-3">
 						<a href="https://github.com/ArunNats">
 							<img
 								ref={(el) => (logosRef.current[1] = el)}
 								src={github}
 								alt="GitHub"
-								className="w-12 h-12 m-3"
+								className="lg:w-12 lg:h-12 md:w-10 md:h-10 h-8 w-8"
 							/>
 						</a>
 					</li>
-					<li>
+					<li className="m-3">
 						<a href="https://leetcode.com/u/arunnats2004/">
 							<img
 								ref={(el) => (logosRef.current[2] = el)}
 								src={leetcode}
 								alt="LeetCode"
-								className="w-12 h-12 m-3"
+								className="lg:w-12 lg:h-12 md:w-10 md:h-10 h-8 w-8"
 							/>
 						</a>
 					</li>
@@ -129,18 +128,17 @@ const AboutSection = () => {
 							ref={(el) => (logosRef.current[3] = el)}
 							className="btn btn-ghost btn-outline text-primary font-poppins"
 						>
-							{" "}
 							Resume
 						</button>
 					</li>
 				</ul>
 			</div>
-			<div className="w-2/6 2xl:w-1/3">
+			<div className="md:w-2/6 lg:w-1/3">
 				<img
 					ref={picRef}
 					src={picture}
 					alt="Profile"
-					className="w-[90%] m-auto h-auto p-7 "
+					className="w-full md:max-w-xs lg:max-w-sm xl:max-w-md 2xl:max-w-lg m-auto p-8 md:p-9"
 				/>
 			</div>
 		</div>

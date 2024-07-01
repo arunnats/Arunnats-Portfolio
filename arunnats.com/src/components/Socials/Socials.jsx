@@ -19,9 +19,9 @@ const Socials = () => {
 				opacity: 1,
 				scrollTrigger: {
 					trigger: socialsRef.current,
-					start: "top 95%", // when the top of the element is at the bottom of the viewport
-					end: "top 30%", // when the top of the element is 80% from the top of the viewport
-					scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+					start: "top 95%",
+					end: "top 30%",
+					scrub: true,
 				},
 				duration: 1,
 				ease: "power2.out",
@@ -32,7 +32,7 @@ const Socials = () => {
 	return (
 		<div
 			ref={socialsRef}
-			className="w-[5vw] h-screen bg-base-100 flex flex-col justify-end items-center pl-4"
+			className="hidden sm:flex sm:w-[5%] h-screen bg-base-100 flex flex-col justify-end items-center pl-4 sm:pl-2"
 		>
 			<a href="https://www.linkedin.com/in/arunnats/">
 				<img src={linkedin} alt="LinkedIn" className="w-8 h-8 m-2" />
@@ -41,7 +41,7 @@ const Socials = () => {
 				<img src={github} alt="GitHub" className="w-8 h-8 m-2" />
 			</a>
 			<a href="https://leetcode.com/u/arunnats2004/">
-				<img src={leetcode} alt="LeetCode" className="w-8 h-auto m-2" />
+				<img src={leetcode} alt="LeetCode" className="w-auto h-8 m-2" />
 			</a>
 			<div className="w-full flex justify-center">
 				<div className="bottom-0 h-[11vh] w-0.5 bg-gray-800"></div>
