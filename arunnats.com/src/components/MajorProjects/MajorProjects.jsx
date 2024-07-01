@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import github from "../../assets/logos/icons8-github.svg";
+import flix from "../../assets/images/projects/flix.png";
+import movieMatch from "../../assets/images/projects/movieMatch.png";
+import bookMate from "../../assets/images/projects/bookMate.png";
 
 const Featured = () => {
 	const revealTitle = useRef(null);
@@ -13,31 +16,43 @@ const Featured = () => {
 	const featuredProjects = [
 		{
 			frontmatter: {
-				external: "https://example.com/project1",
-				title: "Project 1",
-				tech: ["React.js", "Node.js", "GraphQL"],
-				github: "https://github.com/example/project1",
+				external: "",
+				title: "Book Mate",
+				tech: ["Vue.js", "Express.js", "MongoDB"],
+				github: "https://github.com/arunnats/BookMate",
 				cover: {
-					src: "https://via.placeholder.com/600x400",
-					alt: "Project 1 Image",
+					src: bookMate,
+					alt: "Book Mate",
 				},
 			},
 			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 		},
 		{
 			frontmatter: {
-				external: "https://example.com/project2",
-				title: "Project 2",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
-				github: "https://github.com/example/project2",
+				external: "",
+				title: "FLiX",
+				tech: ["React.js", "Node.js", "GraphQL"],
+				github: "https://github.com/arunnats/Flix",
 				cover: {
-					src: "https://via.placeholder.com/600x400",
-					alt: "Project 2 Image",
+					src: flix,
+					alt: "Flix",
 				},
 			},
 			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
 		},
-		// Add more projects as needed
+		{
+			frontmatter: {
+				external: "",
+				title: "Movie Match",
+				tech: ["React.js", "Node.js", "GraphQL"],
+				github: "https://github.com/arunnats/movie-match",
+				cover: {
+					src: movieMatch,
+					alt: "Movie Match",
+				},
+			},
+			html: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+		},
 	];
 
 	return (
@@ -54,7 +69,7 @@ const Featured = () => {
 							ref={(el) => (revealProjects.current[i] = el)}
 							className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8"
 						>
-							<div className="col-span-6 md:col-span-5">
+							<div className="col-span-6 md:col-span-5 my-auto">
 								<div className="relative">
 									<a
 										href={
@@ -70,7 +85,7 @@ const Featured = () => {
 										<img
 											src={frontmatter.cover.src}
 											alt={frontmatter.cover.alt}
-											className="border-l-4 border-primary"
+											className=""
 										/>
 									</a>
 								</div>
@@ -119,7 +134,9 @@ const Featured = () => {
 												rel="nofollow noopener noreferrer"
 												className="text-lightestSlate hover:text-primary mr-4"
 												aria-label="GitHub Link"
-											></a>
+											>
+												<img className="w-12 h-12" src={github} alt="" />
+											</a>
 										)}
 										{frontmatter.external && (
 											<a
@@ -128,7 +145,11 @@ const Featured = () => {
 												rel="nofollow noopener noreferrer"
 												className="text-lightestSlate hover:text-primary"
 												aria-label="External Link"
-											></a>
+											>
+												<button className="btn btn-outline btn-md btn-primary font-poppins">
+													Preview
+												</button>
+											</a>
 										)}
 									</div>
 								</div>
