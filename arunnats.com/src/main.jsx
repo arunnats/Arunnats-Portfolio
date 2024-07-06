@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar/Navbar";
 import BodyCont from "./components/Body/Body";
 import Socials from "./components/Socials/Socials";
@@ -22,5 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				<EmailCont />
 			</div>
 		</div>
+		<Analytics />
 	</React.StrictMode>
 );
