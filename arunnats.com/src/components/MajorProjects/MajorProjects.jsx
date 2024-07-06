@@ -77,7 +77,7 @@ const Featured = () => {
 		},
 		{
 			frontmatter: {
-				external: "",
+				external: "https://flix.arunnats.com/",
 				title: "FLiX",
 				tech: [
 					"Javascript",
