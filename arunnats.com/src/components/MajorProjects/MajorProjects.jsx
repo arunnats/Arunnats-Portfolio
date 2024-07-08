@@ -64,7 +64,7 @@ const Featured = () => {
 	const featuredProjects = [
 		{
 			frontmatter: {
-				external: "",
+				external: "https://bookmate.arunnats.com/",
 				title: "Book Mate",
 				tech: ["Vue.js", "Express.js", "MongoDB"],
 				github: "https://github.com/arunnats/BookMate",
