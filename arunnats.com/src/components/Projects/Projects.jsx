@@ -16,7 +16,14 @@ const Projects = () => {
 			frontmatter: {
 				title: "Harvest Buddy",
 				html: "<p>Harvest Buddy, a finalist at GDSC Bit'N'Build Hackathon at CRCE Mumbai, helps farmers with smart inventory management, real-time alerts via SMS and and AI-driven recommendations. It integrates weather updates and OpenMapBox coordinates for comprehensive agricultural insights.</p>",
-				tech: ["React.js", "Tailwind CSS", "DaisyUI"],
+				tech: [
+					"Javascript",
+					"Twilio",
+					"Express",
+					"NodeJS",
+					"OpenMapBox",
+					"HTML/CSS",
+				],
 			},
 			github: "https://github.com/example/project1",
 			external: "",
@@ -25,7 +32,7 @@ const Projects = () => {
 			frontmatter: {
 				title: "Youtube Video Converter",
 				html: "<p>The YouTube downloader converts YouTube URLs into downloadable files, ensuring seamless video retrieval and user interaction with efficient server-side logic and session management for a smooth experience.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
+				tech: ["Javascript", "NodeJS", "HTML/CSS"],
 			},
 			github: "https://github.com/example/project2",
 			external: "http://yt-converter.arunnats.com/",
@@ -43,7 +50,7 @@ const Projects = () => {
 			frontmatter: {
 				title: "Minutes Maker",
 				html: "<p>Minutes Maker simplifies meeting documentation by transforming audio recordings into organized minutes with accurate transcriptions and concise summaries. It ensures efficient file handling and a user-friendly interface for seamless operation.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
+				tech: ["Javascript", "NodeJS", "HTML/CSS", "GPT-4", "Deepgram Nova"],
 			},
 			github: "https://github.com/example/project4",
 			external: "https://minutesmaker.arunnats.com/",
@@ -52,7 +59,7 @@ const Projects = () => {
 			frontmatter: {
 				title: "FairPlay",
 				html: "<p>FairPlay, developed at CodeInit 2024 by NIT Calicut, offers an interactive platform to explore the historic Playfair Cipher. Encrypt and decrypt messages effortlessly, visualize the process step-by-step, and engage with a GPT-4-powered AI chatbot. Learn about the cipher's history and evolution.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
+				tech: ["Javascript", "React.js", "ExpressJs", "Node.js", "GPT-4"],
 			},
 			github: "https://github.com/example/project5",
 			external: "",
@@ -61,7 +68,7 @@ const Projects = () => {
 			frontmatter: {
 				title: "StoryGPT",
 				html: "<p>StoryGPT Emoji Story Generator uses OpenAI's GPT-3.5 Turbo and DALL-E to craft captivating narratives from user-input emojis and mood selections. Its user-friendly interface generates unique stories with semi-realistic images, perfect for creative writing, education, and entertainment.</p>",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
+				tech: ["Javascript", "NodeJS", "HTML/CSS", "GPT-4"],
 			},
 			github: "https://github.com/example/project6",
 			external: "https://storygpt.arunnats.com/",

@@ -66,7 +66,17 @@ const Featured = () => {
 			frontmatter: {
 				external: "https://bookmate.arunnats.com/",
 				title: "Book Mate",
-				tech: ["Vue.js", "Express.js", "MongoDB"],
+				tech: [
+					"Javascript",
+					"Python",
+					"MySQL",
+					"React.js",
+					"Node.js",
+					"FastAPI",
+					"SciKit",
+					"Seaborn",
+					"MathPlotLib",
+				],
 				github: "https://github.com/arunnats/BookMate",
 				cover: {
 					src: bookMate,
