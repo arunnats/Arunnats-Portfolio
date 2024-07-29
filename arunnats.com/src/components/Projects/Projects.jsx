@@ -62,7 +62,7 @@ const Projects = () => {
 				tech: ["Javascript", "React.js", "ExpressJs", "Node.js", "GPT-4"],
 			},
 			github: "https://github.com/example/project5",
-			external: "",
+			external: "https://fair-play-six.vercel.app/",
 		},
 		{
 			frontmatter: {
