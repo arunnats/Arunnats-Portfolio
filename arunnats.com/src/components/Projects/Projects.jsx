@@ -53,7 +53,8 @@ const Projects = () => {
         tech: ["Javascript", "NodeJS", "HTML/CSS", "GPT-4", "Deepgram Nova"],
       },
       github: "https://github.com/example/project4",
-      external: "https://minutesmaker.arunnats.com/",
+      //   external: "https://minutesmaker.arunnats.com/",
+      external: "",
     },
     {
       frontmatter: {
@@ -71,7 +72,8 @@ const Projects = () => {
         tech: ["Javascript", "NodeJS", "HTML/CSS", "GPT-4"],
       },
       github: "https://github.com/example/project6",
-      external: "https://storygpt.arunnats.com/",
+      //   external: "https://storygpt.arunnats.com/",
+      external: "",
     },
   ];
 
