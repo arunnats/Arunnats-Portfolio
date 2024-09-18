@@ -66,6 +66,20 @@ const Experience = () => {
 
 	const data = [
 		{
+			company: "Intecsol",
+			title: "Student Intern",
+			url: "https://intecsol.org/",
+			range: "August 2024 - Preset",
+			html: `
+        <ul className="list-disc">
+          <li>• Developed AI LLM prompts for research-focused Q&A chatbots, enhancing automated knowledge retrieval and improving accuracy in academic responses.</li>
+          <li>• Deployed prompt content within a SaaS interaction platform, ensuring effective integration and optimization for user-driven results.</li>
+          <li>• Engaged NIT Calicut students on the platform, fostering active participation and gathering critical user feedback to improve system usability.</li>
+        </ul>
+      `,
+			buttonText: "Intecsol",
+		},
+		{
 			company: "CoreStack",
 			title: "SWE Summer Intern",
 			url: "https://www.corestack.io/",
