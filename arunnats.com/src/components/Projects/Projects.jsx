@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import githubIcon from "../../assets/logos/icons8-github.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RISC from "../../assets/reports/NITC-RISC24.pdf";
 
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
@@ -12,6 +13,51 @@ const Projects = () => {
 
   const GRID_LIMIT = 3; // Maximum projects to show initially
   const projects = [
+    {
+      frontmatter: {
+        title: "NITC-RISC24",
+        html: `<p>NITC-RISC24 is a 16-bit reduced instruction set processor built as a part of NIT Calicut's 'Computer Architecture' course. Written in Verilog, the processor can perform various simple functions, with a streamlined multicycle pipeline for executing arithmetic and logic instructions efficiently.</p>`,
+        tech: ["Verilog", "Icarus"],
+      },
+      github: "https://github.com/arunnats/NITC-RISC24/",
+      external: RISC,
+    },
+    {
+      frontmatter: {
+        title: "FLiX",
+        html: "<p>Flix is a movie recommender app using the MovieLens database to provide personalized recommendations based on user preferences. It employs collaborative filtering and a correlation matrix from user ratings. Features include a recommendation engine and data visualization for insights into movie ratings, genres etc.</p>",
+        tech: [
+          "Javascript",
+          "Python",
+          "React.js",
+          "Node.js",
+          "FastAPI",
+          "SciKit",
+          "Seaborn",
+          "MathPlotLib",
+        ],
+      },
+      github: "https://github.com/arunnats/Flix",
+      external: "https://flix.arunnats.com/",
+    },
+    {
+      frontmatter: {
+        title: "Movie Match",
+        html: "<p>Movie Match, winners of GDSC Bit'N'Build Kerala Hackathon, offers a vast, daily-updated movie database from 1940 to mid-2023. Powered by GPT-4-turbo, it provides personalized recommendations and detailed info pages with reviews, IMDB links, and streaming service details for a seamless experience.</p>",
+        tech: ["Javascript", "Python", "Node.js", "GPT-4"],
+      },
+      github: "https://github.com/arunnats/movie-match",
+      external: "",
+    },
+    {
+      frontmatter: {
+        title: "Github Glazer",
+        html: "<p>GitHub Glazer is a React app built with Vite that glazed your GitHub profile. Simply enter a GitHub username, and the app fetches the user's profile information and repositories. It then uses OpenAI's GPT-3.5 to glaze your profile.</p>",
+        tech: ["ReactJS", "TypeScript", "OpenAI"],
+      },
+      github: "https://github.com/arunnats/Github-Glazer",
+      external: "https://githubglazer.arunnats.com/",
+    },
     {
       frontmatter: {
         title: "Harvest Buddy",
@@ -25,7 +71,7 @@ const Projects = () => {
           "HTML/CSS",
         ],
       },
-      github: "https://github.com/example/project1",
+      github: "https://github.com/arunnats/HarvestBuddy",
       external: "",
     },
     {
@@ -34,18 +80,11 @@ const Projects = () => {
         html: "<p>The YouTube downloader converts YouTube URLs into downloadable files, ensuring seamless video retrieval and user interaction with efficient server-side logic and session management for a smooth experience.</p>",
         tech: ["Javascript", "NodeJS", "HTML/CSS"],
       },
-      github: "https://github.com/example/project2",
-      external: "http://yt-converter.arunnats.com/",
+      github: "https://github.com/arunnats/Youtube-Video-Converter",
+      // external: "http://yt-converter.arunnats.com/",
+      external: "",
     },
-    {
-      frontmatter: {
-        title: "Github Glazer",
-        html: "<p>GitHub Glazer is a React app built with Vite that glazed your GitHub profile. Simply enter a GitHub username, and the app fetches the user's profile information and repositories. It then uses OpenAI's GPT-3.5 to glaze your profile.</p>",
-        tech: ["ReactJS", "TypeScript", "OpenAI"],
-      },
-      github: "https://github.com/arunnats/Github-Glazer",
-      external: "https://githubglazer.arunnats.com/",
-    },
+
     {
       frontmatter: {
         title: "Minutes Maker",
